@@ -25,6 +25,9 @@
         Form1.lift_1.tuneSpeedDown = 1.0
         Form1.lift_1.lblSpeedUp = Form1.lbl_UP1
         Form1.lift_1.lblSpeedDown = Form1.lbl_DOWN1
+        Form1.lift_1.lblSelected = Form1.lblLift1
+        Form1.lift_1.grpBx = Form1.grpBx_1
+        Form1.lift_1.selected = False
 
 
         Form1.lift_2.pos = 0
@@ -50,6 +53,10 @@
         Form1.lift_2.tuneSpeedDown = 1.0
         Form1.lift_2.lblSpeedUp = Form1.lbl_UP2
         Form1.lift_2.lblSpeedDown = Form1.lbl_DOWN2
+        Form1.lift_2.lblSelected = Form1.lblLift2
+        Form1.lift_2.grpBx = Form1.grpBx_2
+        Form1.lift_2.selected = False
+
 
         Form1.lift_3.pos = 0
         Form1.lift_3.speed = 0.01
@@ -74,6 +81,9 @@
         Form1.lift_3.tuneSpeedDown = 1.0
         Form1.lift_3.lblSpeedUp = Form1.lbl_UP3
         Form1.lift_3.lblSpeedDown = Form1.lbl_DOWN3
+        Form1.lift_3.lblSelected = Form1.lblLift3
+        Form1.lift_3.grpBx = Form1.grpBx_3
+        Form1.lift_3.selected = False
 
         Form1.lift_4.pos = 0
         Form1.lift_4.speed = 0.01
@@ -98,6 +108,9 @@
         Form1.lift_4.tuneSpeedDown = 1.0
         Form1.lift_4.lblSpeedUp = Form1.lbl_UP4
         Form1.lift_4.lblSpeedDown = Form1.lbl_DOWN4
+        Form1.lift_4.lblSelected = Form1.lblLift4
+        Form1.lift_4.grpBx = Form1.grpBx_4
+        Form1.lift_4.selected = False
 
         Form1.lift(0) = Form1.lift_1
         Form1.lift(1) = Form1.lift_2

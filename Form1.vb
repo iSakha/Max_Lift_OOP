@@ -534,15 +534,44 @@
         End If
     End Sub
 
-    Private Sub grpBx_1_Enter(sender As Object, e As EventArgs) Handles grpBx_1.Enter
 
-    End Sub
 
     Private Sub testBtn_Click(sender As Object, e As EventArgs) Handles testBtn.Click
         web.Show()
     End Sub
 
     Private Sub grpBx_1_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_1.MouseClick
-        grpBx_1.BackColor = Color.FromName("SeaShell")
+        lift(0).selected = Not lift(0).selected
+        If lift(0).selected Then
+            lift(0).highlightSelected()
+        Else
+            lift(0).unSelected()
+        End If
+    End Sub
+
+    Private Sub grpBx_2_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_2.MouseClick
+        lift(1).selected = Not lift(1).selected
+        If lift(1).selected Then
+            lift(1).highlightSelected()
+        Else
+            lift(1).unSelected()
+        End If
+    End Sub
+    Private Sub grpBx_3_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_3.MouseClick
+        lift(2).selected = Not lift(2).selected
+        If lift(2).selected Then
+            lift(2).highlightSelected()
+        Else
+            lift(2).unSelected()
+        End If
+    End Sub
+
+    Private Sub grpBx_4_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_4.MouseClick
+        lift(3).selected = Not lift(3).selected
+        If lift(3).selected Then
+            lift(3).highlightSelected()
+        Else
+            lift(3).unSelected()
+        End If
     End Sub
 End Class

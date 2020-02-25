@@ -910,6 +910,7 @@ Partial Class Form1
         Me.lblLift1.Name = "lblLift1"
         Me.lblLift1.Size = New System.Drawing.Size(10, 10)
         Me.lblLift1.TabIndex = 77
+        Me.lblLift1.Visible = False
         '
         'lblLift2
         '
@@ -918,6 +919,7 @@ Partial Class Form1
         Me.lblLift2.Name = "lblLift2"
         Me.lblLift2.Size = New System.Drawing.Size(10, 10)
         Me.lblLift2.TabIndex = 78
+        Me.lblLift2.Visible = False
         '
         'lblLift3
         '
@@ -926,6 +928,7 @@ Partial Class Form1
         Me.lblLift3.Name = "lblLift3"
         Me.lblLift3.Size = New System.Drawing.Size(10, 10)
         Me.lblLift3.TabIndex = 79
+        Me.lblLift3.Visible = False
         '
         'lblLift4
         '
@@ -934,6 +937,7 @@ Partial Class Form1
         Me.lblLift4.Name = "lblLift4"
         Me.lblLift4.Size = New System.Drawing.Size(10, 10)
         Me.lblLift4.TabIndex = 80
+        Me.lblLift4.Visible = False
         '
         'Form1
         '

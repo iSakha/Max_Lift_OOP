@@ -13,6 +13,9 @@
     Public tuneSpeedUp, tuneSpeedDown As Double
     Public speedUp, speedDown As NumericUpDown
     Public lblSpeedUp, lblSpeedDown As Label
+    Public lblSelected
+    Public grpBx As GroupBox
+    Public selected As Boolean
 
 
 
@@ -33,6 +36,7 @@
                 .btnDOWN.BackColor = Color.LightGray
                 .btnDOWN.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
                 _sender.cmd = _sender.cmdUp
+
             End With
         Else
             With _sender
@@ -43,8 +47,10 @@
 
         If _sender.readyToUp Xor _sender.readyToDown Then
             _sender.notReady = False
+            _sender.highlightSelected()
         Else
             _sender.notReady = True
+            _sender.unSelected()
         End If
 
     End Sub
@@ -71,8 +77,10 @@
 
         If _sender.readyToUp Xor _sender.readyToDown Then
             _sender.notReady = False
+            _sender.highlightSelected()
         Else
             _sender.notReady = True
+            _sender.unSelected()
         End If
 
     End Sub
@@ -137,6 +145,17 @@
         Return deltaPos
     End Function
 
+    '------------------------------------------------- HIGHLIGHT SELECTED -----------------------------------------------------
+    '--------------------------------------------------------------------------------------------------------------------------
+    Sub highlightSelected()
+        Me.lblSelected.visible = True
+        Me.grpBx.BackColor = Color.FromName("WhiteSmoke")
+    End Sub
+
+    Sub unSelected()
+        Me.lblSelected.visible = False
+        Me.grpBx.BackColor = Color.FromName("Control")
+    End Sub
 
 End Class
 'Sub New(_btnUP As Button, _btnDOWN As Button, _pos As Label)
