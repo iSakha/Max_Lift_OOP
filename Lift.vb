@@ -47,6 +47,7 @@
 
         If _sender.readyToUp Xor _sender.readyToDown Then
             _sender.notReady = False
+            _sender.selected = True
             _sender.highlightSelected()
         Else
             _sender.notReady = True
@@ -113,15 +114,21 @@
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
     Sub setTop()
-        topPos = pos
+        If selected Then
+            topPos = pos
+        End If
     End Sub
     Sub setMid()
-        midPos = pos
+        If selected Then
+            midPos = pos
+        End If
     End Sub
     Sub setZero()
-        pos = 0.0
-        zeroPos = pos
-        Me.lblPosition.Text = Format(zeroPos, "#0.0")
+        If selected Then
+            pos = 0.0
+            zeroPos = pos
+            Me.lblPosition.Text = Format(zeroPos, "#0")
+        End If
     End Sub
 
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
@@ -149,12 +156,13 @@
     '--------------------------------------------------------------------------------------------------------------------------
     Sub highlightSelected()
         Me.lblSelected.visible = True
-        Me.grpBx.BackColor = Color.FromName("WhiteSmoke")
+        Me.grpBx.BackColor = Color.FromName("DarkGray")
     End Sub
 
     Sub unSelected()
         Me.lblSelected.visible = False
         Me.grpBx.BackColor = Color.FromName("Control")
+        Me.selected = False
     End Sub
 
 End Class

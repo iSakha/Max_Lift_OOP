@@ -271,8 +271,9 @@
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
                 lift(i).setTop()
+                Call changeBackColorTop(lift(i))
             Next i
-            Call changeBackColor(sender)
+
         Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
         End If
     End Sub
@@ -281,8 +282,8 @@
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
                 lift(i).setMid()
+                Call changeBackColorMid(lift(i))
             Next i
-            Call changeBackColor(sender)
         Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
         End If
     End Sub
@@ -290,10 +291,10 @@
         If modeState = 1 Then
             For i = 0 To 3
                 lift(i).setZero()
+                Call changeBackColorZero(lift(i))
             Next i
-            Call changeBackColor(sender)
             zeroPositionSet = True
-        Else msgbox("Check mode!")
+        Else MsgBox("Check mode!")
         End If
     End Sub
 
@@ -400,7 +401,7 @@
     '--------------------------------------------------------------------------------------------------------------------------
 
     Private Sub btnAuto_Click(sender As Object, e As EventArgs) Handles btnAuto.Click
-        Dim webCl As New System.Net.WebClient
+        'Dim webCl As New System.Net.WebClient
         Dim i As Integer
         btnAutoState = True
         For i = 0 To 3

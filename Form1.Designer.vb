@@ -531,7 +531,7 @@ Partial Class Form1
         '
         Me.btnTOP_4.Location = New System.Drawing.Point(42, 19)
         Me.btnTOP_4.Name = "btnTOP_4"
-        Me.btnTOP_4.Size = New System.Drawing.Size(85, 23)
+        Me.btnTOP_4.Size = New System.Drawing.Size(85, 25)
         Me.btnTOP_4.TabIndex = 40
         Me.btnTOP_4.Text = "TOP_pos_4"
         Me.btnTOP_4.UseVisualStyleBackColor = True
@@ -540,7 +540,7 @@ Partial Class Form1
         '
         Me.btnMID_4.Location = New System.Drawing.Point(42, 51)
         Me.btnMID_4.Name = "btnMID_4"
-        Me.btnMID_4.Size = New System.Drawing.Size(85, 23)
+        Me.btnMID_4.Size = New System.Drawing.Size(85, 25)
         Me.btnMID_4.TabIndex = 0
         Me.btnMID_4.Text = "MID_pos_4"
         Me.btnMID_4.UseVisualStyleBackColor = True
@@ -550,7 +550,7 @@ Partial Class Form1
         Me.btnZERO_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.btnZERO_4.Location = New System.Drawing.Point(42, 83)
         Me.btnZERO_4.Name = "btnZERO_4"
-        Me.btnZERO_4.Size = New System.Drawing.Size(85, 23)
+        Me.btnZERO_4.Size = New System.Drawing.Size(85, 25)
         Me.btnZERO_4.TabIndex = 36
         Me.btnZERO_4.Text = "ZERO_pos_4"
         Me.btnZERO_4.UseVisualStyleBackColor = True
@@ -571,7 +571,7 @@ Partial Class Form1
         '
         Me.btnTOP_3.Location = New System.Drawing.Point(42, 19)
         Me.btnTOP_3.Name = "btnTOP_3"
-        Me.btnTOP_3.Size = New System.Drawing.Size(85, 23)
+        Me.btnTOP_3.Size = New System.Drawing.Size(85, 25)
         Me.btnTOP_3.TabIndex = 40
         Me.btnTOP_3.Text = "TOP_pos_3"
         Me.btnTOP_3.UseVisualStyleBackColor = True
@@ -580,7 +580,7 @@ Partial Class Form1
         '
         Me.btnMID_3.Location = New System.Drawing.Point(42, 51)
         Me.btnMID_3.Name = "btnMID_3"
-        Me.btnMID_3.Size = New System.Drawing.Size(85, 23)
+        Me.btnMID_3.Size = New System.Drawing.Size(85, 25)
         Me.btnMID_3.TabIndex = 0
         Me.btnMID_3.Text = "MID_pos_3"
         Me.btnMID_3.UseVisualStyleBackColor = True
@@ -590,7 +590,7 @@ Partial Class Form1
         Me.btnZERO_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.btnZERO_3.Location = New System.Drawing.Point(42, 83)
         Me.btnZERO_3.Name = "btnZERO_3"
-        Me.btnZERO_3.Size = New System.Drawing.Size(85, 23)
+        Me.btnZERO_3.Size = New System.Drawing.Size(85, 25)
         Me.btnZERO_3.TabIndex = 36
         Me.btnZERO_3.Text = "ZERO_pos_3"
         Me.btnZERO_3.UseVisualStyleBackColor = True
@@ -611,7 +611,7 @@ Partial Class Form1
         '
         Me.btnTOP_2.Location = New System.Drawing.Point(42, 19)
         Me.btnTOP_2.Name = "btnTOP_2"
-        Me.btnTOP_2.Size = New System.Drawing.Size(85, 23)
+        Me.btnTOP_2.Size = New System.Drawing.Size(85, 25)
         Me.btnTOP_2.TabIndex = 40
         Me.btnTOP_2.Text = "TOP_pos_2"
         Me.btnTOP_2.UseVisualStyleBackColor = True
@@ -620,7 +620,7 @@ Partial Class Form1
         '
         Me.btnMID_2.Location = New System.Drawing.Point(42, 51)
         Me.btnMID_2.Name = "btnMID_2"
-        Me.btnMID_2.Size = New System.Drawing.Size(85, 23)
+        Me.btnMID_2.Size = New System.Drawing.Size(85, 25)
         Me.btnMID_2.TabIndex = 0
         Me.btnMID_2.Text = "MID_pos_2"
         Me.btnMID_2.UseVisualStyleBackColor = True
@@ -630,7 +630,7 @@ Partial Class Form1
         Me.btnZERO_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.btnZERO_2.Location = New System.Drawing.Point(42, 83)
         Me.btnZERO_2.Name = "btnZERO_2"
-        Me.btnZERO_2.Size = New System.Drawing.Size(85, 23)
+        Me.btnZERO_2.Size = New System.Drawing.Size(85, 25)
         Me.btnZERO_2.TabIndex = 36
         Me.btnZERO_2.Text = "ZERO_pos_2"
         Me.btnZERO_2.UseVisualStyleBackColor = True
@@ -649,9 +649,11 @@ Partial Class Form1
         '
         'btnTOP_1
         '
+        Me.btnTOP_1.FlatAppearance.BorderColor = System.Drawing.Color.Lime
+        Me.btnTOP_1.FlatAppearance.BorderSize = 2
         Me.btnTOP_1.Location = New System.Drawing.Point(42, 19)
         Me.btnTOP_1.Name = "btnTOP_1"
-        Me.btnTOP_1.Size = New System.Drawing.Size(85, 23)
+        Me.btnTOP_1.Size = New System.Drawing.Size(85, 25)
         Me.btnTOP_1.TabIndex = 40
         Me.btnTOP_1.Text = "TOP_pos_1"
         Me.btnTOP_1.UseVisualStyleBackColor = True
@@ -660,7 +662,7 @@ Partial Class Form1
         '
         Me.btnMID_1.Location = New System.Drawing.Point(42, 51)
         Me.btnMID_1.Name = "btnMID_1"
-        Me.btnMID_1.Size = New System.Drawing.Size(85, 23)
+        Me.btnMID_1.Size = New System.Drawing.Size(85, 25)
         Me.btnMID_1.TabIndex = 0
         Me.btnMID_1.Text = "MID_pos_1"
         Me.btnMID_1.UseVisualStyleBackColor = True
@@ -670,7 +672,7 @@ Partial Class Form1
         Me.btnZERO_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.btnZERO_1.Location = New System.Drawing.Point(42, 83)
         Me.btnZERO_1.Name = "btnZERO_1"
-        Me.btnZERO_1.Size = New System.Drawing.Size(85, 23)
+        Me.btnZERO_1.Size = New System.Drawing.Size(85, 25)
         Me.btnZERO_1.TabIndex = 36
         Me.btnZERO_1.Text = "ZERO_pos_1"
         Me.btnZERO_1.UseVisualStyleBackColor = True
