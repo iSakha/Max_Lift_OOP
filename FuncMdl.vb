@@ -10,9 +10,9 @@
         Form1.lift_1.readyToDown = False
         Form1.lift_1.btnUP = Form1.btnUp_1
         Form1.lift_1.btnDOWN = Form1.btnDown_1
-        Form1.lift_1.btnTopPos = Form1.btnTOP_1
-        Form1.lift_1.btnMidPos = Form1.btnMID_1
-        Form1.lift_1.btnZeroPos = Form1.btnZERO_1
+        'Form1.lift_1.btnTopPos = Form1.btnTOP_1
+        'Form1.lift_1.btnMidPos = Form1.btnMID_1
+        'Form1.lift_1.btnZeroPos = Form1.btnZERO_1
         Form1.lift_1.txtBox = Form1.txt_1
         Form1.lift_1.timer = Form1.Timer1
         Form1.lift_1.cmdUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,1,1"
@@ -38,9 +38,9 @@
         Form1.lift_2.readyToDown = False
         Form1.lift_2.btnUP = Form1.btnUp_2
         Form1.lift_2.btnDOWN = Form1.btnDown_2
-        Form1.lift_2.btnTopPos = Form1.btnTOP_2
-        Form1.lift_2.btnMidPos = Form1.btnMID_2
-        Form1.lift_2.btnZeroPos = Form1.btnZERO_2
+        'Form1.lift_2.btnTopPos = Form1.btnTOP_2
+        'Form1.lift_2.btnMidPos = Form1.btnMID_2
+        'Form1.lift_2.btnZeroPos = Form1.btnZERO_2
         Form1.lift_2.txtBox = Form1.txt_2
         Form1.lift_2.timer = Form1.Timer2
         Form1.lift_2.cmdUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,3,1"
@@ -66,9 +66,9 @@
         Form1.lift_3.readyToDown = False
         Form1.lift_3.btnUP = Form1.btnUp_3
         Form1.lift_3.btnDOWN = Form1.btnDown_3
-        Form1.lift_3.btnTopPos = Form1.btnTOP_3
-        Form1.lift_3.btnMidPos = Form1.btnMID_3
-        Form1.lift_3.btnZeroPos = Form1.btnZERO_3
+        'Form1.lift_3.btnTopPos = Form1.btnTOP_3
+        'Form1.lift_3.btnMidPos = Form1.btnMID_3
+        'Form1.lift_3.btnZeroPos = Form1.btnZERO_3
         Form1.lift_3.txtBox = Form1.txt_3
         Form1.lift_3.timer = Form1.Timer3
         Form1.lift_3.cmdUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,5,1"
@@ -85,37 +85,37 @@
         Form1.lift_3.grpBx = Form1.grpBx_3
         Form1.lift_3.selected = False
 
-        Form1.lift_4.pos = 0
-        Form1.lift_4.speed = 0.01
-        Form1.lift_4.lblPosition = Form1.lblTimer_4
-        Form1.lift_4.notReady = True
-        Form1.lift_4.readyToUp = False
-        Form1.lift_4.readyToDown = False
-        Form1.lift_4.btnUP = Form1.btnUp_4
-        Form1.lift_4.btnDOWN = Form1.btnDown_4
-        Form1.lift_4.btnTopPos = Form1.btnTOP_4
-        Form1.lift_4.btnMidPos = Form1.btnMID_4
-        Form1.lift_4.btnZeroPos = Form1.btnZERO_4
-        Form1.lift_4.txtBox = Form1.txt_4
-        Form1.lift_4.timer = Form1.Timer4
-        Form1.lift_4.cmdUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,7,1"
-        Form1.lift_4.cmdDown = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,8,1"
-        Form1.lift_4.cmdStopUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,7,0"
-        Form1.lift_4.cmdStopDown = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,8,0"
-        Form1.lift_4.speedUp = Form1.tuneSpeedUP4
-        Form1.lift_4.speedDown = Form1.tuneSpeedDOWN4
-        Form1.lift_4.tuneSpeedUp = 1.0
-        Form1.lift_4.tuneSpeedDown = 1.0
-        Form1.lift_4.lblSpeedUp = Form1.lbl_UP4
-        Form1.lift_4.lblSpeedDown = Form1.lbl_DOWN4
-        Form1.lift_4.lblSelected = Form1.lblLift4
-        Form1.lift_4.grpBx = Form1.grpBx_4
-        Form1.lift_4.selected = False
+        'Form1.lift_4.pos = 0
+        'Form1.lift_4.speed = 0.01
+        ''Form1.lift_4.lblPosition = Form1.lblTimer_4
+        'Form1.lift_4.notReady = True
+        'Form1.lift_4.readyToUp = False
+        'Form1.lift_4.readyToDown = False
+        ''Form1.lift_4.btnUP = Form1.btnUp_4
+        ''Form1.lift_4.btnDOWN = Form1.btnDown_4
+        ''Form1.lift_4.btnTopPos = Form1.btnTOP_4
+        ''Form1.lift_4.btnMidPos = Form1.btnMID_4
+        ''Form1.lift_4.btnZeroPos = Form1.btnZERO_4
+        ''Form1.lift_4.txtBox = Form1.txt_4
+        'Form1.lift_4.timer = Form1.Timer4
+        'Form1.lift_4.cmdUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,7,1"
+        'Form1.lift_4.cmdDown = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,8,1"
+        'Form1.lift_4.cmdStopUp = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,7,0"
+        'Form1.lift_4.cmdStopDown = "http://" & Form1.myUrl & "/cmd.cgi?cmd=REL,8,0"
+        ''Form1.lift_4.speedUp = Form1.tuneSpeedUP4
+        ''Form1.lift_4.speedDown = Form1.tuneSpeedDOWN4
+        'Form1.lift_4.tuneSpeedUp = 1.0
+        'Form1.lift_4.tuneSpeedDown = 1.0
+        ''Form1.lift_4.lblSpeedUp = Form1.lbl_UP4
+        ''Form1.lift_4.lblSpeedDown = Form1.lbl_DOWN4
+        ''Form1.lift_4.lblSelected = Form1.lblLift4
+        ''Form1.lift_4.grpBx = Form1.grpBx_4
+        'Form1.lift_4.selected = False
 
         Form1.lift(0) = Form1.lift_1
         Form1.lift(1) = Form1.lift_2
         Form1.lift(2) = Form1.lift_3
-        Form1.lift(3) = Form1.lift_4
+        'Form1.lift(3) = Form1.lift_4
 
 
     End Sub
@@ -133,7 +133,7 @@
         _sender.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
 
         If (_sender.name = "RadioButton3") Then
-            For i = 0 To 3
+            For i = 0 To 2
                 Form1.lift(i).clearDirection()
             Next i
             Form1.btnStart.Enabled = False

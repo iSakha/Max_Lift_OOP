@@ -41,15 +41,6 @@ Partial Class Form1
         Me.btnUp_3 = New System.Windows.Forms.Button()
         Me.btnDown_3 = New System.Windows.Forms.Button()
         Me.txt_3 = New System.Windows.Forms.TextBox()
-        Me.grpBx_4 = New System.Windows.Forms.GroupBox()
-        Me.lbl_DOWN4 = New System.Windows.Forms.Label()
-        Me.lbl_UP4 = New System.Windows.Forms.Label()
-        Me.tuneSpeedDOWN4 = New System.Windows.Forms.NumericUpDown()
-        Me.tuneSpeedUP4 = New System.Windows.Forms.NumericUpDown()
-        Me.lblTimer_4 = New System.Windows.Forms.Label()
-        Me.btnUp_4 = New System.Windows.Forms.Button()
-        Me.btnDown_4 = New System.Windows.Forms.Button()
-        Me.txt_4 = New System.Windows.Forms.TextBox()
         Me.grpBx_1 = New System.Windows.Forms.GroupBox()
         Me.lbl_DOWN1 = New System.Windows.Forms.Label()
         Me.lbl_UP1 = New System.Windows.Forms.Label()
@@ -59,30 +50,11 @@ Partial Class Form1
         Me.btnUp_1 = New System.Windows.Forms.Button()
         Me.btnDown_1 = New System.Windows.Forms.Button()
         Me.txt_1 = New System.Windows.Forms.TextBox()
-        Me.pos_4 = New System.Windows.Forms.GroupBox()
-        Me.btnTOP_4 = New System.Windows.Forms.Button()
-        Me.btnMID_4 = New System.Windows.Forms.Button()
-        Me.btnZERO_4 = New System.Windows.Forms.Button()
-        Me.pos_3 = New System.Windows.Forms.GroupBox()
-        Me.btnTOP_3 = New System.Windows.Forms.Button()
-        Me.btnMID_3 = New System.Windows.Forms.Button()
-        Me.btnZERO_3 = New System.Windows.Forms.Button()
-        Me.pos_2 = New System.Windows.Forms.GroupBox()
-        Me.btnTOP_2 = New System.Windows.Forms.Button()
-        Me.btnMID_2 = New System.Windows.Forms.Button()
-        Me.btnZERO_2 = New System.Windows.Forms.Button()
-        Me.pos_1 = New System.Windows.Forms.GroupBox()
-        Me.btnTOP_1 = New System.Windows.Forms.Button()
-        Me.btnMID_1 = New System.Windows.Forms.Button()
-        Me.btnZERO_1 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnStart = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnZeroPos = New System.Windows.Forms.Button()
-        Me.btnMidPos = New System.Windows.Forms.Button()
-        Me.btnUpPos = New System.Windows.Forms.Button()
         Me.btnAuto = New System.Windows.Forms.Button()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -93,33 +65,40 @@ Partial Class Form1
         Me.resp_txt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.testBtn = New System.Windows.Forms.Button()
         Me.pumpChkBx_1 = New System.Windows.Forms.CheckBox()
         Me.pumpChkBx_2 = New System.Windows.Forms.CheckBox()
         Me.pumpChkBx_3 = New System.Windows.Forms.CheckBox()
-        Me.pumpChkBx_4 = New System.Windows.Forms.CheckBox()
         Me.speedChckBx = New System.Windows.Forms.CheckBox()
         Me.lblLift1 = New System.Windows.Forms.Label()
         Me.lblLift2 = New System.Windows.Forms.Label()
         Me.lblLift3 = New System.Windows.Forms.Label()
-        Me.lblLift4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Col1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.grpBx_2.SuspendLayout()
         CType(Me.tuneSpeedDOWN2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tuneSpeedUP2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBx_3.SuspendLayout()
         CType(Me.tuneSpeedDOWN3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tuneSpeedUP3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpBx_4.SuspendLayout()
-        CType(Me.tuneSpeedDOWN4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tuneSpeedUP4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBx_1.SuspendLayout()
         CType(Me.tuneSpeedDOWN1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tuneSpeedUP1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pos_4.SuspendLayout()
-        Me.pos_3.SuspendLayout()
-        Me.pos_2.SuspendLayout()
-        Me.pos_1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grpBx_2
@@ -318,104 +297,6 @@ Partial Class Form1
         Me.txt_3.Size = New System.Drawing.Size(75, 20)
         Me.txt_3.TabIndex = 17
         '
-        'grpBx_4
-        '
-        Me.grpBx_4.BackColor = System.Drawing.SystemColors.Control
-        Me.grpBx_4.Controls.Add(Me.lbl_DOWN4)
-        Me.grpBx_4.Controls.Add(Me.lbl_UP4)
-        Me.grpBx_4.Controls.Add(Me.tuneSpeedDOWN4)
-        Me.grpBx_4.Controls.Add(Me.tuneSpeedUP4)
-        Me.grpBx_4.Controls.Add(Me.lblTimer_4)
-        Me.grpBx_4.Controls.Add(Me.btnUp_4)
-        Me.grpBx_4.Controls.Add(Me.btnDown_4)
-        Me.grpBx_4.Controls.Add(Me.txt_4)
-        Me.grpBx_4.Location = New System.Drawing.Point(513, 94)
-        Me.grpBx_4.Name = "grpBx_4"
-        Me.grpBx_4.Size = New System.Drawing.Size(160, 148)
-        Me.grpBx_4.TabIndex = 27
-        Me.grpBx_4.TabStop = False
-        Me.grpBx_4.Text = "Lift 4"
-        '
-        'lbl_DOWN4
-        '
-        Me.lbl_DOWN4.AutoSize = True
-        Me.lbl_DOWN4.Location = New System.Drawing.Point(1, 127)
-        Me.lbl_DOWN4.Name = "lbl_DOWN4"
-        Me.lbl_DOWN4.Size = New System.Drawing.Size(101, 13)
-        Me.lbl_DOWN4.TabIndex = 26
-        Me.lbl_DOWN4.Text = "Tune SpeedDOWN"
-        Me.lbl_DOWN4.Visible = False
-        '
-        'lbl_UP4
-        '
-        Me.lbl_UP4.AutoSize = True
-        Me.lbl_UP4.Location = New System.Drawing.Point(1, 107)
-        Me.lbl_UP4.Name = "lbl_UP4"
-        Me.lbl_UP4.Size = New System.Drawing.Size(81, 13)
-        Me.lbl_UP4.TabIndex = 25
-        Me.lbl_UP4.Text = "Tune SpeedUP"
-        Me.lbl_UP4.Visible = False
-        '
-        'tuneSpeedDOWN4
-        '
-        Me.tuneSpeedDOWN4.DecimalPlaces = 2
-        Me.tuneSpeedDOWN4.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.tuneSpeedDOWN4.Location = New System.Drawing.Point(102, 122)
-        Me.tuneSpeedDOWN4.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
-        Me.tuneSpeedDOWN4.Name = "tuneSpeedDOWN4"
-        Me.tuneSpeedDOWN4.Size = New System.Drawing.Size(56, 20)
-        Me.tuneSpeedDOWN4.TabIndex = 24
-        Me.tuneSpeedDOWN4.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.tuneSpeedDOWN4.Visible = False
-        '
-        'tuneSpeedUP4
-        '
-        Me.tuneSpeedUP4.DecimalPlaces = 2
-        Me.tuneSpeedUP4.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.tuneSpeedUP4.Location = New System.Drawing.Point(102, 102)
-        Me.tuneSpeedUP4.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
-        Me.tuneSpeedUP4.Name = "tuneSpeedUP4"
-        Me.tuneSpeedUP4.Size = New System.Drawing.Size(56, 20)
-        Me.tuneSpeedUP4.TabIndex = 23
-        Me.tuneSpeedUP4.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.tuneSpeedUP4.Visible = False
-        '
-        'lblTimer_4
-        '
-        Me.lblTimer_4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblTimer_4.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.lblTimer_4.ForeColor = System.Drawing.Color.Navy
-        Me.lblTimer_4.Location = New System.Drawing.Point(6, 14)
-        Me.lblTimer_4.Name = "lblTimer_4"
-        Me.lblTimer_4.Size = New System.Drawing.Size(50, 22)
-        Me.lblTimer_4.TabIndex = 18
-        Me.lblTimer_4.Text = "0"
-        '
-        'btnUp_4
-        '
-        Me.btnUp_4.Location = New System.Drawing.Point(39, 44)
-        Me.btnUp_4.Name = "btnUp_4"
-        Me.btnUp_4.Size = New System.Drawing.Size(75, 23)
-        Me.btnUp_4.TabIndex = 5
-        Me.btnUp_4.Text = "UP"
-        Me.btnUp_4.UseVisualStyleBackColor = True
-        '
-        'btnDown_4
-        '
-        Me.btnDown_4.Location = New System.Drawing.Point(39, 73)
-        Me.btnDown_4.Name = "btnDown_4"
-        Me.btnDown_4.Size = New System.Drawing.Size(75, 23)
-        Me.btnDown_4.TabIndex = 9
-        Me.btnDown_4.Text = "DOWN"
-        Me.btnDown_4.UseVisualStyleBackColor = True
-        '
-        'txt_4
-        '
-        Me.txt_4.Location = New System.Drawing.Point(79, 16)
-        Me.txt_4.Name = "txt_4"
-        Me.txt_4.Size = New System.Drawing.Size(75, 20)
-        Me.txt_4.TabIndex = 17
-        '
         'grpBx_1
         '
         Me.grpBx_1.BackColor = System.Drawing.SystemColors.Control
@@ -515,168 +396,6 @@ Partial Class Form1
         Me.txt_1.Size = New System.Drawing.Size(75, 20)
         Me.txt_1.TabIndex = 17
         '
-        'pos_4
-        '
-        Me.pos_4.Controls.Add(Me.btnTOP_4)
-        Me.pos_4.Controls.Add(Me.btnMID_4)
-        Me.pos_4.Controls.Add(Me.btnZERO_4)
-        Me.pos_4.Location = New System.Drawing.Point(510, 300)
-        Me.pos_4.Name = "pos_4"
-        Me.pos_4.Size = New System.Drawing.Size(160, 114)
-        Me.pos_4.TabIndex = 47
-        Me.pos_4.TabStop = False
-        Me.pos_4.Text = "Position Lift_4"
-        '
-        'btnTOP_4
-        '
-        Me.btnTOP_4.Location = New System.Drawing.Point(42, 19)
-        Me.btnTOP_4.Name = "btnTOP_4"
-        Me.btnTOP_4.Size = New System.Drawing.Size(85, 25)
-        Me.btnTOP_4.TabIndex = 40
-        Me.btnTOP_4.Text = "TOP_pos_4"
-        Me.btnTOP_4.UseVisualStyleBackColor = True
-        '
-        'btnMID_4
-        '
-        Me.btnMID_4.Location = New System.Drawing.Point(42, 51)
-        Me.btnMID_4.Name = "btnMID_4"
-        Me.btnMID_4.Size = New System.Drawing.Size(85, 25)
-        Me.btnMID_4.TabIndex = 0
-        Me.btnMID_4.Text = "MID_pos_4"
-        Me.btnMID_4.UseVisualStyleBackColor = True
-        '
-        'btnZERO_4
-        '
-        Me.btnZERO_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnZERO_4.Location = New System.Drawing.Point(42, 83)
-        Me.btnZERO_4.Name = "btnZERO_4"
-        Me.btnZERO_4.Size = New System.Drawing.Size(85, 25)
-        Me.btnZERO_4.TabIndex = 36
-        Me.btnZERO_4.Text = "ZERO_pos_4"
-        Me.btnZERO_4.UseVisualStyleBackColor = True
-        '
-        'pos_3
-        '
-        Me.pos_3.Controls.Add(Me.btnTOP_3)
-        Me.pos_3.Controls.Add(Me.btnMID_3)
-        Me.pos_3.Controls.Add(Me.btnZERO_3)
-        Me.pos_3.Location = New System.Drawing.Point(344, 300)
-        Me.pos_3.Name = "pos_3"
-        Me.pos_3.Size = New System.Drawing.Size(160, 114)
-        Me.pos_3.TabIndex = 48
-        Me.pos_3.TabStop = False
-        Me.pos_3.Text = "Position Lift_3"
-        '
-        'btnTOP_3
-        '
-        Me.btnTOP_3.Location = New System.Drawing.Point(42, 19)
-        Me.btnTOP_3.Name = "btnTOP_3"
-        Me.btnTOP_3.Size = New System.Drawing.Size(85, 25)
-        Me.btnTOP_3.TabIndex = 40
-        Me.btnTOP_3.Text = "TOP_pos_3"
-        Me.btnTOP_3.UseVisualStyleBackColor = True
-        '
-        'btnMID_3
-        '
-        Me.btnMID_3.Location = New System.Drawing.Point(42, 51)
-        Me.btnMID_3.Name = "btnMID_3"
-        Me.btnMID_3.Size = New System.Drawing.Size(85, 25)
-        Me.btnMID_3.TabIndex = 0
-        Me.btnMID_3.Text = "MID_pos_3"
-        Me.btnMID_3.UseVisualStyleBackColor = True
-        '
-        'btnZERO_3
-        '
-        Me.btnZERO_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnZERO_3.Location = New System.Drawing.Point(42, 83)
-        Me.btnZERO_3.Name = "btnZERO_3"
-        Me.btnZERO_3.Size = New System.Drawing.Size(85, 25)
-        Me.btnZERO_3.TabIndex = 36
-        Me.btnZERO_3.Text = "ZERO_pos_3"
-        Me.btnZERO_3.UseVisualStyleBackColor = True
-        '
-        'pos_2
-        '
-        Me.pos_2.Controls.Add(Me.btnTOP_2)
-        Me.pos_2.Controls.Add(Me.btnMID_2)
-        Me.pos_2.Controls.Add(Me.btnZERO_2)
-        Me.pos_2.Location = New System.Drawing.Point(178, 300)
-        Me.pos_2.Name = "pos_2"
-        Me.pos_2.Size = New System.Drawing.Size(160, 114)
-        Me.pos_2.TabIndex = 49
-        Me.pos_2.TabStop = False
-        Me.pos_2.Text = "Position Lift_2"
-        '
-        'btnTOP_2
-        '
-        Me.btnTOP_2.Location = New System.Drawing.Point(42, 19)
-        Me.btnTOP_2.Name = "btnTOP_2"
-        Me.btnTOP_2.Size = New System.Drawing.Size(85, 25)
-        Me.btnTOP_2.TabIndex = 40
-        Me.btnTOP_2.Text = "TOP_pos_2"
-        Me.btnTOP_2.UseVisualStyleBackColor = True
-        '
-        'btnMID_2
-        '
-        Me.btnMID_2.Location = New System.Drawing.Point(42, 51)
-        Me.btnMID_2.Name = "btnMID_2"
-        Me.btnMID_2.Size = New System.Drawing.Size(85, 25)
-        Me.btnMID_2.TabIndex = 0
-        Me.btnMID_2.Text = "MID_pos_2"
-        Me.btnMID_2.UseVisualStyleBackColor = True
-        '
-        'btnZERO_2
-        '
-        Me.btnZERO_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnZERO_2.Location = New System.Drawing.Point(42, 83)
-        Me.btnZERO_2.Name = "btnZERO_2"
-        Me.btnZERO_2.Size = New System.Drawing.Size(85, 25)
-        Me.btnZERO_2.TabIndex = 36
-        Me.btnZERO_2.Text = "ZERO_pos_2"
-        Me.btnZERO_2.UseVisualStyleBackColor = True
-        '
-        'pos_1
-        '
-        Me.pos_1.Controls.Add(Me.btnTOP_1)
-        Me.pos_1.Controls.Add(Me.btnMID_1)
-        Me.pos_1.Controls.Add(Me.btnZERO_1)
-        Me.pos_1.Location = New System.Drawing.Point(12, 300)
-        Me.pos_1.Name = "pos_1"
-        Me.pos_1.Size = New System.Drawing.Size(160, 114)
-        Me.pos_1.TabIndex = 46
-        Me.pos_1.TabStop = False
-        Me.pos_1.Text = "Position Lift_1"
-        '
-        'btnTOP_1
-        '
-        Me.btnTOP_1.FlatAppearance.BorderColor = System.Drawing.Color.Lime
-        Me.btnTOP_1.FlatAppearance.BorderSize = 2
-        Me.btnTOP_1.Location = New System.Drawing.Point(42, 19)
-        Me.btnTOP_1.Name = "btnTOP_1"
-        Me.btnTOP_1.Size = New System.Drawing.Size(85, 25)
-        Me.btnTOP_1.TabIndex = 40
-        Me.btnTOP_1.Text = "TOP_pos_1"
-        Me.btnTOP_1.UseVisualStyleBackColor = True
-        '
-        'btnMID_1
-        '
-        Me.btnMID_1.Location = New System.Drawing.Point(42, 51)
-        Me.btnMID_1.Name = "btnMID_1"
-        Me.btnMID_1.Size = New System.Drawing.Size(85, 25)
-        Me.btnMID_1.TabIndex = 0
-        Me.btnMID_1.Text = "MID_pos_1"
-        Me.btnMID_1.UseVisualStyleBackColor = True
-        '
-        'btnZERO_1
-        '
-        Me.btnZERO_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnZERO_1.Location = New System.Drawing.Point(42, 83)
-        Me.btnZERO_1.Name = "btnZERO_1"
-        Me.btnZERO_1.Size = New System.Drawing.Size(85, 25)
-        Me.btnZERO_1.TabIndex = 36
-        Me.btnZERO_1.Text = "ZERO_pos_1"
-        Me.btnZERO_1.UseVisualStyleBackColor = True
-        '
         'Timer1
         '
         Me.Timer1.Interval = 10
@@ -684,13 +403,13 @@ Partial Class Form1
         'btnStart
         '
         Me.btnStart.AllowDrop = True
-        Me.btnStart.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnStart.Location = New System.Drawing.Point(688, 108)
+        Me.btnStart.BackColor = System.Drawing.Color.DarkGray
+        Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.btnStart.Location = New System.Drawing.Point(65, 321)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(75, 53)
         Me.btnStart.TabIndex = 50
-        Me.btnStart.Text = "Start"
+        Me.btnStart.Text = "Start" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Man"
         Me.btnStart.UseVisualStyleBackColor = False
         '
         'Timer2
@@ -705,48 +424,13 @@ Partial Class Form1
         '
         Me.Timer4.Interval = 10
         '
-        'btnZeroPos
-        '
-        Me.btnZeroPos.AllowDrop = True
-        Me.btnZeroPos.BackColor = System.Drawing.SystemColors.Control
-        Me.btnZeroPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnZeroPos.Location = New System.Drawing.Point(688, 359)
-        Me.btnZeroPos.Name = "btnZeroPos"
-        Me.btnZeroPos.Size = New System.Drawing.Size(75, 38)
-        Me.btnZeroPos.TabIndex = 53
-        Me.btnZeroPos.Text = "Set Zero" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Position" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.btnZeroPos.UseVisualStyleBackColor = False
-        '
-        'btnMidPos
-        '
-        Me.btnMidPos.AllowDrop = True
-        Me.btnMidPos.BackColor = System.Drawing.SystemColors.Control
-        Me.btnMidPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnMidPos.Location = New System.Drawing.Point(688, 311)
-        Me.btnMidPos.Name = "btnMidPos"
-        Me.btnMidPos.Size = New System.Drawing.Size(75, 38)
-        Me.btnMidPos.TabIndex = 52
-        Me.btnMidPos.Text = "Set Mid Position"
-        Me.btnMidPos.UseVisualStyleBackColor = False
-        '
-        'btnUpPos
-        '
-        Me.btnUpPos.AllowDrop = True
-        Me.btnUpPos.BackColor = System.Drawing.SystemColors.Control
-        Me.btnUpPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnUpPos.Location = New System.Drawing.Point(688, 260)
-        Me.btnUpPos.Name = "btnUpPos"
-        Me.btnUpPos.Size = New System.Drawing.Size(75, 38)
-        Me.btnUpPos.TabIndex = 51
-        Me.btnUpPos.Text = "Set Top Position"
-        Me.btnUpPos.UseVisualStyleBackColor = False
-        '
         'btnAuto
         '
         Me.btnAuto.AllowDrop = True
-        Me.btnAuto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAuto.BackColor = System.Drawing.Color.DarkGray
         Me.btnAuto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnAuto.Location = New System.Drawing.Point(688, 167)
+        Me.btnAuto.ForeColor = System.Drawing.Color.Black
+        Me.btnAuto.Location = New System.Drawing.Point(390, 323)
         Me.btnAuto.Name = "btnAuto"
         Me.btnAuto.Size = New System.Drawing.Size(75, 53)
         Me.btnAuto.TabIndex = 54
@@ -833,22 +517,12 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Location = New System.Drawing.Point(386, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(283, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(224, 62)
         Me.GroupBox1.TabIndex = 66
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Select mode"
-        '
-        'testBtn
-        '
-        Me.testBtn.Enabled = False
-        Me.testBtn.Location = New System.Drawing.Point(259, 14)
-        Me.testBtn.Name = "testBtn"
-        Me.testBtn.Size = New System.Drawing.Size(75, 46)
-        Me.testBtn.TabIndex = 67
-        Me.testBtn.Text = "Test"
-        Me.testBtn.UseVisualStyleBackColor = True
         '
         'pumpChkBx_1
         '
@@ -883,21 +557,10 @@ Partial Class Form1
         Me.pumpChkBx_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.pumpChkBx_3.UseVisualStyleBackColor = True
         '
-        'pumpChkBx_4
-        '
-        Me.pumpChkBx_4.Appearance = System.Windows.Forms.Appearance.Button
-        Me.pumpChkBx_4.Location = New System.Drawing.Point(556, 248)
-        Me.pumpChkBx_4.Name = "pumpChkBx_4"
-        Me.pumpChkBx_4.Size = New System.Drawing.Size(61, 46)
-        Me.pumpChkBx_4.TabIndex = 75
-        Me.pumpChkBx_4.Text = "Pump4"
-        Me.pumpChkBx_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.pumpChkBx_4.UseVisualStyleBackColor = True
-        '
         'speedChckBx
         '
         Me.speedChckBx.Appearance = System.Windows.Forms.Appearance.Button
-        Me.speedChckBx.Location = New System.Drawing.Point(659, 37)
+        Me.speedChckBx.Location = New System.Drawing.Point(540, 17)
         Me.speedChckBx.Name = "speedChckBx"
         Me.speedChckBx.Size = New System.Drawing.Size(104, 24)
         Me.speedChckBx.TabIndex = 76
@@ -932,30 +595,166 @@ Partial Class Form1
         Me.lblLift3.TabIndex = 79
         Me.lblLift3.Visible = False
         '
-        'lblLift4
+        'DataGridView1
         '
-        Me.lblLift4.BackColor = System.Drawing.Color.Lime
-        Me.lblLift4.Location = New System.Drawing.Point(585, 81)
-        Me.lblLift4.Name = "lblLift4"
-        Me.lblLift4.Size = New System.Drawing.Size(10, 10)
-        Me.lblLift4.TabIndex = 80
-        Me.lblLift4.Visible = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Col1, Me.Col2, Me.Col3, Me.Col4})
+        Me.DataGridView1.Location = New System.Drawing.Point(513, 81)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(275, 295)
+        Me.DataGridView1.TabIndex = 80
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox1.Location = New System.Drawing.Point(661, 17)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(104, 24)
+        Me.CheckBox1.TabIndex = 81
+        Me.CheckBox1.Text = "No TCP/IP"
+        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Col1
+        '
+        Me.Col1.HeaderText = "Pos#"
+        Me.Col1.Name = "Col1"
+        Me.Col1.Width = 40
+        '
+        'Col2
+        '
+        Me.Col2.HeaderText = "Lift 1"
+        Me.Col2.Name = "Col2"
+        Me.Col2.Width = 63
+        '
+        'Col3
+        '
+        Me.Col3.HeaderText = "Lift 2"
+        Me.Col3.Name = "Col3"
+        Me.Col3.Width = 63
+        '
+        'Col4
+        '
+        Me.Col4.HeaderText = "Lift 3"
+        Me.Col4.Name = "Col4"
+        Me.Col4.Width = 63
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(117, 380)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(110, 23)
+        Me.Button1.TabIndex = 82
+        Me.Button1.Text = "Set ZERO position"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(277, 380)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(104, 23)
+        Me.Button2.TabIndex = 83
+        Me.Button2.Text = "Save position"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(117, 418)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(110, 23)
+        Me.Button3.TabIndex = 84
+        Me.Button3.Text = "Delete position"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(277, 418)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(104, 23)
+        Me.Button4.TabIndex = 85
+        Me.Button4.Text = "Edit position"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(196, 342)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 13)
+        Me.Label3.TabIndex = 86
+        Me.Label3.Text = "Position Name"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(277, 342)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 87
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Button5.Location = New System.Drawing.Point(557, 402)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 88
+        Me.Button5.Text = "<<<"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Button6.Location = New System.Drawing.Point(661, 402)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 89
+        Me.Button6.Text = ">>>"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Wheat
+        Me.Label4.Location = New System.Drawing.Point(578, 433)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.TabIndex = 90
+        Me.Label4.Text = "PREV"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Wheat
+        Me.Label5.Location = New System.Drawing.Point(679, 433)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(36, 13)
+        Me.Label5.TabIndex = 91
+        Me.Label5.Text = "NEXT"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.lblLift4)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblLift3)
         Me.Controls.Add(Me.lblLift2)
         Me.Controls.Add(Me.lblLift1)
         Me.Controls.Add(Me.speedChckBx)
-        Me.Controls.Add(Me.pumpChkBx_4)
         Me.Controls.Add(Me.pumpChkBx_3)
         Me.Controls.Add(Me.pumpChkBx_2)
         Me.Controls.Add(Me.pumpChkBx_1)
-        Me.Controls.Add(Me.testBtn)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.resp_txt)
@@ -963,17 +762,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.url_txt)
         Me.Controls.Add(Me.btnAuto)
-        Me.Controls.Add(Me.btnZeroPos)
-        Me.Controls.Add(Me.btnMidPos)
-        Me.Controls.Add(Me.btnUpPos)
         Me.Controls.Add(Me.btnStart)
-        Me.Controls.Add(Me.pos_4)
-        Me.Controls.Add(Me.pos_3)
-        Me.Controls.Add(Me.pos_2)
-        Me.Controls.Add(Me.pos_1)
         Me.Controls.Add(Me.grpBx_2)
         Me.Controls.Add(Me.grpBx_3)
-        Me.Controls.Add(Me.grpBx_4)
         Me.Controls.Add(Me.grpBx_1)
         Me.Name = "Form1"
         Me.Text = " "
@@ -985,19 +776,12 @@ Partial Class Form1
         Me.grpBx_3.PerformLayout()
         CType(Me.tuneSpeedDOWN3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tuneSpeedUP3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grpBx_4.ResumeLayout(False)
-        Me.grpBx_4.PerformLayout()
-        CType(Me.tuneSpeedDOWN4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tuneSpeedUP4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpBx_1.ResumeLayout(False)
         Me.grpBx_1.PerformLayout()
         CType(Me.tuneSpeedDOWN1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tuneSpeedUP1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pos_4.ResumeLayout(False)
-        Me.pos_3.ResumeLayout(False)
-        Me.pos_2.ResumeLayout(False)
-        Me.pos_1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1013,40 +797,16 @@ Partial Class Form1
     Friend WithEvents btnUp_3 As Button
     Friend WithEvents btnDown_3 As Button
     Friend WithEvents txt_3 As TextBox
-    Friend WithEvents grpBx_4 As GroupBox
-    Friend WithEvents lblTimer_4 As Label
-    Friend WithEvents btnUp_4 As Button
-    Friend WithEvents btnDown_4 As Button
-    Friend WithEvents txt_4 As TextBox
     Friend WithEvents grpBx_1 As GroupBox
     Friend WithEvents lblTimer_1 As Label
     Friend WithEvents btnUp_1 As Button
     Friend WithEvents btnDown_1 As Button
     Friend WithEvents txt_1 As TextBox
-    Friend WithEvents pos_4 As GroupBox
-    Friend WithEvents btnTOP_4 As Button
-    Friend WithEvents btnMID_4 As Button
-    Friend WithEvents btnZERO_4 As Button
-    Friend WithEvents pos_3 As GroupBox
-    Friend WithEvents btnTOP_3 As Button
-    Friend WithEvents btnMID_3 As Button
-    Friend WithEvents btnZERO_3 As Button
-    Friend WithEvents pos_2 As GroupBox
-    Friend WithEvents btnTOP_2 As Button
-    Friend WithEvents btnMID_2 As Button
-    Friend WithEvents btnZERO_2 As Button
-    Friend WithEvents pos_1 As GroupBox
-    Friend WithEvents btnTOP_1 As Button
-    Friend WithEvents btnMID_1 As Button
-    Friend WithEvents btnZERO_1 As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnStart As Button
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Timer4 As Timer
-    Friend WithEvents btnZeroPos As Button
-    Friend WithEvents btnMidPos As Button
-    Friend WithEvents btnUpPos As Button
     Friend WithEvents btnAuto As Button
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
@@ -1057,11 +817,9 @@ Partial Class Form1
     Friend WithEvents resp_txt As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents testBtn As Button
     Friend WithEvents pumpChkBx_1 As CheckBox
     Friend WithEvents pumpChkBx_2 As CheckBox
     Friend WithEvents pumpChkBx_3 As CheckBox
-    Friend WithEvents pumpChkBx_4 As CheckBox
     Friend WithEvents lbl_DOWN2 As Label
     Friend WithEvents lbl_UP2 As Label
     Friend WithEvents tuneSpeedDOWN2 As NumericUpDown
@@ -1070,10 +828,6 @@ Partial Class Form1
     Friend WithEvents lbl_UP3 As Label
     Friend WithEvents tuneSpeedDOWN3 As NumericUpDown
     Friend WithEvents tuneSpeedUP3 As NumericUpDown
-    Friend WithEvents lbl_DOWN4 As Label
-    Friend WithEvents lbl_UP4 As Label
-    Friend WithEvents tuneSpeedDOWN4 As NumericUpDown
-    Friend WithEvents tuneSpeedUP4 As NumericUpDown
     Friend WithEvents lbl_DOWN1 As Label
     Friend WithEvents lbl_UP1 As Label
     Friend WithEvents tuneSpeedDOWN1 As NumericUpDown
@@ -1082,5 +836,20 @@ Partial Class Form1
     Friend WithEvents lblLift1 As Label
     Friend WithEvents lblLift2 As Label
     Friend WithEvents lblLift3 As Label
-    Friend WithEvents lblLift4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Col1 As DataGridViewTextBoxColumn
+    Friend WithEvents Col2 As DataGridViewTextBoxColumn
+    Friend WithEvents Col3 As DataGridViewTextBoxColumn
+    Friend WithEvents Col4 As DataGridViewTextBoxColumn
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

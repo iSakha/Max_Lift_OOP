@@ -64,11 +64,11 @@
         lift(2).selectDirectionDown(lift(2))
     End Sub
 
-    Private Sub btnUp_4_Click(sender As Object, e As EventArgs) Handles btnUp_4.Click
+    Private Sub btnUp_4_Click(sender As Object, e As EventArgs)
         lift(3).selectDirectionUp(lift(3))
     End Sub
 
-    Private Sub btnDown_4_Click(sender As Object, e As EventArgs) Handles btnDown_4.Click
+    Private Sub btnDown_4_Click(sender As Object, e As EventArgs)
         lift(3).selectDirectionDown(lift(3))
     End Sub
     '------------------------------------------------- START/STOP BUTTON -------------------------------------------------------
@@ -266,7 +266,7 @@
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
 
-    Private Sub btnUpPos_Click(sender As Object, e As EventArgs) Handles btnUpPos.Click
+    Private Sub btnUpPos_Click(sender As Object, e As EventArgs)
         Dim i As Integer
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
@@ -277,7 +277,7 @@
         Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
         End If
     End Sub
-    Private Sub btnMidPos_Click(sender As Object, e As EventArgs) Handles btnMidPos.Click
+    Private Sub btnMidPos_Click(sender As Object, e As EventArgs)
         Dim i As Integer
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
@@ -287,7 +287,7 @@
         Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
         End If
     End Sub
-    Private Sub btnZeroPos_Click(sender As Object, e As EventArgs) Handles btnZeroPos.Click
+    Private Sub btnZeroPos_Click(sender As Object, e As EventArgs)
         If modeState = 1 Then
             For i = 0 To 3
                 lift(i).setZero()
@@ -301,15 +301,15 @@
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
 
-    Private Sub btnTOP_1_Click(sender As Object, e As EventArgs) Handles btnTOP_1.Click
+    Private Sub btnTOP_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(0).readyToTop()
             Call chngBackColor(sender, lift(0))
-        Else msgbox("Set AUTO mode!")
+        Else MsgBox("Set AUTO mode!")
         End If
     End Sub
 
-    Private Sub btnMID_1_Click(sender As Object, e As EventArgs) Handles btnMID_1.Click
+    Private Sub btnMID_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(0).readyToMid()
             Call chngBackColor(sender, lift(0))
@@ -317,7 +317,7 @@
         End If
     End Sub
 
-    Private Sub btnZERO_1_Click(sender As Object, e As EventArgs) Handles btnZERO_1.Click
+    Private Sub btnZERO_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(0).readyToZero()
             Call chngBackColor(sender, lift(0))
@@ -325,7 +325,7 @@
         End If
     End Sub
 
-    Private Sub btnTOP_2_Click(sender As Object, e As EventArgs) Handles btnTOP_2.Click
+    Private Sub btnTOP_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(1).readyToTop()
             Call chngBackColor(sender, lift(1))
@@ -333,7 +333,7 @@
         End If
     End Sub
 
-    Private Sub btnMID_2_Click(sender As Object, e As EventArgs) Handles btnMID_2.Click
+    Private Sub btnMID_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(1).readyToMid()
             Call chngBackColor(sender, lift(1))
@@ -341,7 +341,7 @@
         End If
     End Sub
 
-    Private Sub btnZERO_2_Click(sender As Object, e As EventArgs) Handles btnZERO_2.Click
+    Private Sub btnZERO_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(1).readyToZero()
             Call chngBackColor(sender, lift(1))
@@ -349,7 +349,7 @@
         End If
     End Sub
 
-    Private Sub btnTOP_3_Click(sender As Object, e As EventArgs) Handles btnTOP_3.Click
+    Private Sub btnTOP_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(2).readyToTop()
             Call chngBackColor(sender, lift(2))
@@ -357,7 +357,7 @@
         End If
     End Sub
 
-    Private Sub btnMID_3_Click(sender As Object, e As EventArgs) Handles btnMID_3.Click
+    Private Sub btnMID_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(2).readyToMid()
             Call chngBackColor(sender, lift(2))
@@ -365,7 +365,7 @@
         End If
     End Sub
 
-    Private Sub btnZERO_3_Click(sender As Object, e As EventArgs) Handles btnZERO_3.Click
+    Private Sub btnZERO_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(2).readyToZero()
             Call chngBackColor(sender, lift(2))
@@ -373,7 +373,7 @@
         End If
     End Sub
 
-    Private Sub btnTOP_4_Click(sender As Object, e As EventArgs) Handles btnTOP_4.Click
+    Private Sub btnTOP_4_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(3).readyToTop()
             Call chngBackColor(sender, lift(3))
@@ -381,7 +381,7 @@
         End If
     End Sub
 
-    Private Sub btnMID_4_Click(sender As Object, e As EventArgs) Handles btnMID_4.Click
+    Private Sub btnMID_4_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(3).readyToMid()
             Call chngBackColor(sender, lift(3))
@@ -389,7 +389,7 @@
         End If
     End Sub
 
-    Private Sub btnZERO_4_Click(sender As Object, e As EventArgs) Handles btnZERO_4.Click
+    Private Sub btnZERO_4_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
             lift(3).readyToZero()
             Call chngBackColor(sender, lift(3))
@@ -414,7 +414,7 @@
                 lift(i).cmd = lift(i).cmdDown
             End If
             Try
-                webCl.DownloadString(lift(i).cmd)
+                'webCl.DownloadString(lift(i).cmd)
             Catch ex As Exception
 
             End Try
@@ -474,10 +474,10 @@
         Dim webCl As New System.Net.WebClient
         If pumpChkBx_1.Checked Then
             pumpChkBx_1.BackColor = Color.FromName("lime")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,1")
+            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,1")
         Else
             pumpChkBx_1.BackColor = Color.FromName("gainsboro")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,0")
+            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,0")
         End If
     End Sub
 
@@ -485,10 +485,10 @@
         Dim webCl As New System.Net.WebClient
         If pumpChkBx_2.Checked Then
             pumpChkBx_2.BackColor = Color.FromName("lime")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,1")
+            ' webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,1")
         Else
             pumpChkBx_2.BackColor = Color.FromName("gainsboro")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,0")
+            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,0")
         End If
     End Sub
 
@@ -496,29 +496,29 @@
         Dim webCl As New System.Net.WebClient
         If pumpChkBx_3.Checked Then
             pumpChkBx_3.BackColor = Color.FromName("lime")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,1")
+            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,1")
         Else
             pumpChkBx_3.BackColor = Color.FromName("gainsboro")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,0")
+            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,0")
         End If
     End Sub
 
-    Private Sub pumpChkBx_4_CheckedChanged(sender As Object, e As EventArgs) Handles pumpChkBx_4.CheckedChanged
+    Private Sub pumpChkBx_4_CheckedChanged(sender As Object, e As EventArgs)
         Dim webCl As New System.Net.WebClient
-        If pumpChkBx_4.Checked Then
-            pumpChkBx_4.BackColor = Color.FromName("lime")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,1")
-        Else
-            pumpChkBx_4.BackColor = Color.FromName("gainsboro")
-            webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,0")
-        End If
+        'If pumpChkBx_4.Checked Then
+        '    pumpChkBx_4.BackColor = Color.FromName("lime")
+        '    webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,1")
+        'Else
+        '    pumpChkBx_4.BackColor = Color.FromName("gainsboro")
+        '    webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,0")
+        'End If
     End Sub
 
     Private Sub speedChckBx_CheckedChanged(sender As Object, e As EventArgs) Handles speedChckBx.CheckedChanged
         Dim i As Integer
         If speedChckBx.Checked Then
             speedChckBx.BackColor = Color.FromName("lime")
-            For i = 0 To 3
+            For i = 0 To 2
                 lift(i).speedUp.Visible = True
                 lift(i).speedDown.Visible = True
                 lift(i).lblSpeedUp.Visible = True
@@ -526,7 +526,7 @@
             Next i
         Else
             speedChckBx.BackColor = Color.FromName("gainsboro")
-            For i = 0 To 3
+            For i = 0 To 2
                 lift(i).speedUp.Visible = False
                 lift(i).speedDown.Visible = False
                 lift(i).lblSpeedUp.Visible = False
@@ -537,8 +537,8 @@
 
 
 
-    Private Sub testBtn_Click(sender As Object, e As EventArgs) Handles testBtn.Click
-        web.Show()
+    Private Sub testBtn_Click(sender As Object, e As EventArgs)
+        'Web.Show()
     End Sub
 
     Private Sub grpBx_1_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_1.MouseClick
@@ -567,7 +567,7 @@
         End If
     End Sub
 
-    Private Sub grpBx_4_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_4.MouseClick
+    Private Sub grpBx_4_MouseClick(sender As Object, e As MouseEventArgs)
         lift(3).selected = Not lift(3).selected
         If lift(3).selected Then
             lift(3).highlightSelected()
