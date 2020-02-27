@@ -1,20 +1,39 @@
 ﻿Public Class Lift
+
     Public btnUP, btnDOWN As Button
+    Public btnPump As CheckBox
+
+    Public lblPosition As Label
+    Public lblSpeedUp, lblSpeedDown As Label
+    Public lblSelected As Label
+
+    Public timer As Timer
+
+    Public grpBx As GroupBox
+
+    Public txtPos As TextBox
+
+    Public speedUp, speedDown As NumericUpDown
+
     Public pos As Double
     Public speed As Double
-    Public lblPosition As Label
-    Public timer As Timer
-    Public readyToUp, readyToDown, notReady As Boolean
+    Public tuneSpeedUp As Double
+    Public tuneSpeedDown As Double
+
+
+    Public readyToUp, readyToDown As Boolean
+
     Public topPos, midPos, zeroPos As Double
     Public btnTopPos, btnMidPos, btnZeroPos As Button
-    Public txtBox As TextBox
+
+
     Public cmdUp, cmdDown, cmdStopUp, cmdStopDown As String
     Public cmd As String = ""
-    Public tuneSpeedUp, tuneSpeedDown As Double
-    Public speedUp, speedDown As NumericUpDown
-    Public lblSpeedUp, lblSpeedDown As Label
-    Public lblSelected
-    Public grpBx As GroupBox
+
+
+
+
+
     Public selected As Boolean
 
 
@@ -90,7 +109,7 @@
         Me.btnUP.BackColor = Color.LightGray
         Me.readyToDown = False
         Me.btnDOWN.BackColor = Color.LightGray
-        Me.notReady = True
+        ' Me.notReady = True
     End Sub
 
     '------------------------------------------------- LIFT MOVING (Up and Down) -----------------------------------------------
@@ -134,20 +153,20 @@
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
     Sub readyToTop()
-        Me.txtBox.Text = topPos
+        ' Me.txtBox.Text = topPos
     End Sub
     Sub readyToMid()
-        Me.txtBox.Text = midPos
+        'Me.txtBox.Text = midPos
     End Sub
     Sub readyToZero()
-        Me.txtBox.Text = zeroPos
+        'Me.txtBox.Text = zeroPos
     End Sub
 
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------
     Function delta()
         Dim deltaPos As Double
-        deltaPos = pos - Convert.ToDouble(Me.txtBox.Text)
+        'deltaPos = pos - Convert.ToDouble(Me.txtBox.Text)
         deltaPos = Math.Round(deltaPos, 2)
         Return deltaPos
     End Function

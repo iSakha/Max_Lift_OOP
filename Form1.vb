@@ -76,7 +76,7 @@
     Private Sub btnStart_MouseDown(sender As Object, e As MouseEventArgs) Handles btnStart.MouseDown
         Dim webCl As New System.Net.WebClient
         Dim i As Integer
-        For i = 0 To 3
+        For i = 0 To 2
             lift(i).timer.Enabled = True
             Try
                 'webCl.DownloadString(lift(i).cmd)
@@ -89,7 +89,7 @@
 
     Private Sub btnStart_MouseUp(sender As Object, e As MouseEventArgs) Handles btnStart.MouseUp
         Dim webCl As New System.Net.WebClient
-        For i = 0 To 3
+        For i = 0 To 2
             lift(i).timer.Enabled = False
             'webCl.DownloadString(lift(i).cmdStopUp)
             'webCl.DownloadString(lift(i).cmdStopDown)
@@ -565,6 +565,10 @@
         Else
             lift(2).unSelected()
         End If
+    End Sub
+
+    Private Sub txt_3_TextChanged(sender As Object, e As EventArgs) Handles txtPos_3.TextChanged
+
     End Sub
 
     Private Sub grpBx_4_MouseClick(sender As Object, e As MouseEventArgs)

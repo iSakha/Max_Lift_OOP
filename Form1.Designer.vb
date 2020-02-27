@@ -31,7 +31,7 @@ Partial Class Form1
         Me.lblTimer_2 = New System.Windows.Forms.Label()
         Me.btnUp_2 = New System.Windows.Forms.Button()
         Me.btnDown_2 = New System.Windows.Forms.Button()
-        Me.txt_2 = New System.Windows.Forms.TextBox()
+        Me.txtPos_2 = New System.Windows.Forms.TextBox()
         Me.grpBx_3 = New System.Windows.Forms.GroupBox()
         Me.lbl_DOWN3 = New System.Windows.Forms.Label()
         Me.lbl_UP3 = New System.Windows.Forms.Label()
@@ -40,7 +40,7 @@ Partial Class Form1
         Me.lblTimer_3 = New System.Windows.Forms.Label()
         Me.btnUp_3 = New System.Windows.Forms.Button()
         Me.btnDown_3 = New System.Windows.Forms.Button()
-        Me.txt_3 = New System.Windows.Forms.TextBox()
+        Me.txtPos_3 = New System.Windows.Forms.TextBox()
         Me.grpBx_1 = New System.Windows.Forms.GroupBox()
         Me.lbl_DOWN1 = New System.Windows.Forms.Label()
         Me.lbl_UP1 = New System.Windows.Forms.Label()
@@ -49,7 +49,7 @@ Partial Class Form1
         Me.lblTimer_1 = New System.Windows.Forms.Label()
         Me.btnUp_1 = New System.Windows.Forms.Button()
         Me.btnDown_1 = New System.Windows.Forms.Button()
-        Me.txt_1 = New System.Windows.Forms.TextBox()
+        Me.txtPos_1 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnStart = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -73,11 +73,11 @@ Partial Class Form1
         Me.lblLift2 = New System.Windows.Forms.Label()
         Me.lblLift3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Col1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -111,7 +111,7 @@ Partial Class Form1
         Me.grpBx_2.Controls.Add(Me.lblTimer_2)
         Me.grpBx_2.Controls.Add(Me.btnUp_2)
         Me.grpBx_2.Controls.Add(Me.btnDown_2)
-        Me.grpBx_2.Controls.Add(Me.txt_2)
+        Me.grpBx_2.Controls.Add(Me.txtPos_2)
         Me.grpBx_2.Location = New System.Drawing.Point(181, 94)
         Me.grpBx_2.Name = "grpBx_2"
         Me.grpBx_2.Size = New System.Drawing.Size(160, 148)
@@ -192,12 +192,12 @@ Partial Class Form1
         Me.btnDown_2.Text = "DOWN"
         Me.btnDown_2.UseVisualStyleBackColor = True
         '
-        'txt_2
+        'txtPos_2
         '
-        Me.txt_2.Location = New System.Drawing.Point(78, 16)
-        Me.txt_2.Name = "txt_2"
-        Me.txt_2.Size = New System.Drawing.Size(75, 20)
-        Me.txt_2.TabIndex = 17
+        Me.txtPos_2.Location = New System.Drawing.Point(78, 16)
+        Me.txtPos_2.Name = "txtPos_2"
+        Me.txtPos_2.Size = New System.Drawing.Size(75, 20)
+        Me.txtPos_2.TabIndex = 17
         '
         'grpBx_3
         '
@@ -209,7 +209,7 @@ Partial Class Form1
         Me.grpBx_3.Controls.Add(Me.lblTimer_3)
         Me.grpBx_3.Controls.Add(Me.btnUp_3)
         Me.grpBx_3.Controls.Add(Me.btnDown_3)
-        Me.grpBx_3.Controls.Add(Me.txt_3)
+        Me.grpBx_3.Controls.Add(Me.txtPos_3)
         Me.grpBx_3.Location = New System.Drawing.Point(347, 94)
         Me.grpBx_3.Name = "grpBx_3"
         Me.grpBx_3.Size = New System.Drawing.Size(160, 148)
@@ -290,12 +290,12 @@ Partial Class Form1
         Me.btnDown_3.Text = "DOWN"
         Me.btnDown_3.UseVisualStyleBackColor = True
         '
-        'txt_3
+        'txtPos_3
         '
-        Me.txt_3.Location = New System.Drawing.Point(79, 16)
-        Me.txt_3.Name = "txt_3"
-        Me.txt_3.Size = New System.Drawing.Size(75, 20)
-        Me.txt_3.TabIndex = 17
+        Me.txtPos_3.Location = New System.Drawing.Point(79, 16)
+        Me.txtPos_3.Name = "txtPos_3"
+        Me.txtPos_3.Size = New System.Drawing.Size(75, 20)
+        Me.txtPos_3.TabIndex = 17
         '
         'grpBx_1
         '
@@ -307,7 +307,7 @@ Partial Class Form1
         Me.grpBx_1.Controls.Add(Me.lblTimer_1)
         Me.grpBx_1.Controls.Add(Me.btnUp_1)
         Me.grpBx_1.Controls.Add(Me.btnDown_1)
-        Me.grpBx_1.Controls.Add(Me.txt_1)
+        Me.grpBx_1.Controls.Add(Me.txtPos_1)
         Me.grpBx_1.Location = New System.Drawing.Point(15, 94)
         Me.grpBx_1.Name = "grpBx_1"
         Me.grpBx_1.Size = New System.Drawing.Size(160, 148)
@@ -389,12 +389,12 @@ Partial Class Form1
         Me.btnDown_1.Text = "DOWN"
         Me.btnDown_1.UseVisualStyleBackColor = True
         '
-        'txt_1
+        'txtPos_1
         '
-        Me.txt_1.Location = New System.Drawing.Point(79, 16)
-        Me.txt_1.Name = "txt_1"
-        Me.txt_1.Size = New System.Drawing.Size(75, 20)
-        Me.txt_1.TabIndex = 17
+        Me.txtPos_1.Location = New System.Drawing.Point(79, 16)
+        Me.txtPos_1.Name = "txtPos_1"
+        Me.txtPos_1.Size = New System.Drawing.Size(75, 20)
+        Me.txtPos_1.TabIndex = 17
         '
         'Timer1
         '
@@ -604,17 +604,6 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(275, 295)
         Me.DataGridView1.TabIndex = 80
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.CheckBox1.Location = New System.Drawing.Point(661, 17)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(104, 24)
-        Me.CheckBox1.TabIndex = 81
-        Me.CheckBox1.Text = "No TCP/IP"
-        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'Col1
         '
         Me.Col1.HeaderText = "Pos#"
@@ -638,6 +627,17 @@ Partial Class Form1
         Me.Col4.HeaderText = "Lift 3"
         Me.Col4.Name = "Col4"
         Me.Col4.Width = 63
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox1.Location = New System.Drawing.Point(661, 17)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(104, 24)
+        Me.CheckBox1.TabIndex = 81
+        Me.CheckBox1.Text = "No TCP/IP"
+        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -791,17 +791,17 @@ Partial Class Form1
     Friend WithEvents lblTimer_2 As Label
     Friend WithEvents btnUp_2 As Button
     Friend WithEvents btnDown_2 As Button
-    Friend WithEvents txt_2 As TextBox
+    Friend WithEvents txtPos_2 As TextBox
     Friend WithEvents grpBx_3 As GroupBox
     Friend WithEvents lblTimer_3 As Label
     Friend WithEvents btnUp_3 As Button
     Friend WithEvents btnDown_3 As Button
-    Friend WithEvents txt_3 As TextBox
+    Friend WithEvents txtPos_3 As TextBox
     Friend WithEvents grpBx_1 As GroupBox
     Friend WithEvents lblTimer_1 As Label
     Friend WithEvents btnUp_1 As Button
     Friend WithEvents btnDown_1 As Button
-    Friend WithEvents txt_1 As TextBox
+    Friend WithEvents txtPos_1 As TextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnStart As Button
     Friend WithEvents Timer2 As Timer
