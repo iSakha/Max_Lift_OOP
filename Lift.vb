@@ -22,22 +22,10 @@
 
 
     Public readyToUp, readyToDown As Boolean
-
-    Public topPos, midPos, zeroPos As Double
-    Public btnTopPos, btnMidPos, btnZeroPos As Button
-
+    Public selected As Boolean
 
     Public cmdUp, cmdDown, cmdStopUp, cmdStopDown As String
     Public cmd As String = ""
-
-
-
-
-
-    Public selected As Boolean
-
-
-
 
 
     '------------------------------------------------- SELECT DIRECTION (Up or Down) -------------------------------------------
@@ -49,7 +37,6 @@
         If _sender.readyToUp Then
             With _sender
                 .readyToDown = False
-                .notReady = False
                 .btnUP.BackColor = Color.Yellow
                 .btnUP.Font = New Font("Georgia", 10, FontStyle.Bold)
                 .btnDOWN.BackColor = Color.LightGray
@@ -65,11 +52,10 @@
         End If
 
         If _sender.readyToUp Xor _sender.readyToDown Then
-            _sender.notReady = False
             _sender.selected = True
             _sender.highlightSelected()
         Else
-            _sender.notReady = True
+            _sender.selected = False
             _sender.unSelected()
         End If
 
@@ -81,7 +67,7 @@
         If _sender.readyToDown Then
             With _sender
                 .readyToUp = False
-                .notReady = False
+                '              .notReady = False
                 .btnDOWN.BackColor = Color.Yellow
                 .btnDOWN.Font = New Font("Georgia", 10, FontStyle.Bold)
                 .btnUP.BackColor = Color.LightGray
@@ -96,10 +82,9 @@
         End If
 
         If _sender.readyToUp Xor _sender.readyToDown Then
-            _sender.notReady = False
+            '           _sender.notReady = False
             _sender.highlightSelected()
         Else
-            _sender.notReady = True
             _sender.unSelected()
         End If
 
@@ -125,42 +110,42 @@
     Sub moveDOWN()
 
         pos = lblPosition.Text
-        pos = Convert.ToDouble(pos) - speed * speed * tuneSpeedDown
+        pos = Convert.ToDouble(pos) - speed * tuneSpeedDown
         lblPosition.Text = pos
 
     End Sub
 
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
-    Sub setTop()
-        If selected Then
-            topPos = pos
-        End If
-    End Sub
-    Sub setMid()
-        If selected Then
-            midPos = pos
-        End If
-    End Sub
-    Sub setZero()
-        If selected Then
-            pos = 0.0
-            zeroPos = pos
-            Me.lblPosition.Text = Format(zeroPos, "#0")
-        End If
-    End Sub
+    'Sub setTop()
+    '    If selected Then
+    '        'topPos = pos
+    '    End If
+    'End Sub
+    'Sub setMid()
+    '    If selected Then
+    '        'midPos = pos
+    '    End If
+    'End Sub
+    'Sub setZero()
+    '    If selected Then
+    '        pos = 0.0
+    '        'zeroPos = pos
+    '        'Me.lblPosition.Text = Format(zeroPos, "#0")
+    '    End If
+    'End Sub
 
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
-    Sub readyToTop()
-        ' Me.txtBox.Text = topPos
-    End Sub
-    Sub readyToMid()
-        'Me.txtBox.Text = midPos
-    End Sub
-    Sub readyToZero()
-        'Me.txtBox.Text = zeroPos
-    End Sub
+    'Sub readyToTop()
+    '    ' Me.txtBox.Text = topPos
+    'End Sub
+    'Sub readyToMid()
+    '    'Me.txtBox.Text = midPos
+    'End Sub
+    'Sub readyToZero()
+    '    'Me.txtBox.Text = zeroPos
+    'End Sub
 
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------

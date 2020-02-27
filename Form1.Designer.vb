@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class mainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -72,18 +72,18 @@ Partial Class Form1
         Me.lblLift1 = New System.Windows.Forms.Label()
         Me.lblLift2 = New System.Windows.Forms.Label()
         Me.lblLift3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv = New System.Windows.Forms.DataGridView()
         Me.Col1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSetZero = New System.Windows.Forms.Button()
+        Me.btnSavePos = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPosName = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -98,7 +98,7 @@ Partial Class Form1
         CType(Me.tuneSpeedDOWN1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tuneSpeedUP1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grpBx_2
@@ -404,6 +404,9 @@ Partial Class Form1
         '
         Me.btnStart.AllowDrop = True
         Me.btnStart.BackColor = System.Drawing.Color.DarkGray
+        Me.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.btnStart.Location = New System.Drawing.Point(65, 321)
         Me.btnStart.Name = "btnStart"
@@ -595,14 +598,14 @@ Partial Class Form1
         Me.lblLift3.TabIndex = 79
         Me.lblLift3.Visible = False
         '
-        'DataGridView1
+        'dgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Col1, Me.Col2, Me.Col3, Me.Col4})
-        Me.DataGridView1.Location = New System.Drawing.Point(513, 81)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(275, 295)
-        Me.DataGridView1.TabIndex = 80
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Col1, Me.Col2, Me.Col3, Me.Col4})
+        Me.dgv.Location = New System.Drawing.Point(513, 81)
+        Me.dgv.Name = "dgv"
+        Me.dgv.Size = New System.Drawing.Size(275, 295)
+        Me.dgv.TabIndex = 80
         '
         'Col1
         '
@@ -639,23 +642,23 @@ Partial Class Form1
         Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnSetZero
         '
-        Me.Button1.Location = New System.Drawing.Point(117, 380)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(110, 23)
-        Me.Button1.TabIndex = 82
-        Me.Button1.Text = "Set ZERO position"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSetZero.Location = New System.Drawing.Point(117, 380)
+        Me.btnSetZero.Name = "btnSetZero"
+        Me.btnSetZero.Size = New System.Drawing.Size(110, 23)
+        Me.btnSetZero.TabIndex = 82
+        Me.btnSetZero.Text = "Set ZERO position"
+        Me.btnSetZero.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSavePos
         '
-        Me.Button2.Location = New System.Drawing.Point(277, 380)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 23)
-        Me.Button2.TabIndex = 83
-        Me.Button2.Text = "Save position"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSavePos.Location = New System.Drawing.Point(277, 380)
+        Me.btnSavePos.Name = "btnSavePos"
+        Me.btnSavePos.Size = New System.Drawing.Size(104, 23)
+        Me.btnSavePos.TabIndex = 83
+        Me.btnSavePos.Text = "Save position"
+        Me.btnSavePos.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -684,12 +687,12 @@ Partial Class Form1
         Me.Label3.TabIndex = 86
         Me.Label3.Text = "Position Name"
         '
-        'TextBox1
+        'txtPosName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(277, 342)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 87
+        Me.txtPosName.Location = New System.Drawing.Point(277, 342)
+        Me.txtPosName.Name = "txtPosName"
+        Me.txtPosName.Size = New System.Drawing.Size(100, 20)
+        Me.txtPosName.TabIndex = 87
         '
         'Button5
         '
@@ -731,7 +734,7 @@ Partial Class Form1
         Me.Label5.TabIndex = 91
         Me.Label5.Text = "NEXT"
         '
-        'Form1
+        'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -740,14 +743,14 @@ Partial Class Form1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPosName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSavePos)
+        Me.Controls.Add(Me.btnSetZero)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.lblLift3)
         Me.Controls.Add(Me.lblLift2)
         Me.Controls.Add(Me.lblLift1)
@@ -766,7 +769,7 @@ Partial Class Form1
         Me.Controls.Add(Me.grpBx_2)
         Me.Controls.Add(Me.grpBx_3)
         Me.Controls.Add(Me.grpBx_1)
-        Me.Name = "Form1"
+        Me.Name = "mainForm"
         Me.Text = " "
         Me.grpBx_2.ResumeLayout(False)
         Me.grpBx_2.PerformLayout()
@@ -781,7 +784,7 @@ Partial Class Form1
         CType(Me.tuneSpeedDOWN1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tuneSpeedUP1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -836,18 +839,18 @@ Partial Class Form1
     Friend WithEvents lblLift1 As Label
     Friend WithEvents lblLift2 As Label
     Friend WithEvents lblLift3 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv As DataGridView
     Friend WithEvents Col1 As DataGridViewTextBoxColumn
     Friend WithEvents Col2 As DataGridViewTextBoxColumn
     Friend WithEvents Col3 As DataGridViewTextBoxColumn
     Friend WithEvents Col4 As DataGridViewTextBoxColumn
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnSetZero As Button
+    Friend WithEvents btnSavePos As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPosName As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Label4 As Label

@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class mainForm
 
     Public lift_1 As New Lift()
     Public lift_2 As New Lift()
@@ -64,13 +64,13 @@
         lift(2).selectDirectionDown(lift(2))
     End Sub
 
-    Private Sub btnUp_4_Click(sender As Object, e As EventArgs)
-        lift(3).selectDirectionUp(lift(3))
-    End Sub
+    'Private Sub btnUp_4_Click(sender As Object, e As EventArgs)
+    '    lift(3).selectDirectionUp(lift(3))
+    'End Sub
 
-    Private Sub btnDown_4_Click(sender As Object, e As EventArgs)
-        lift(3).selectDirectionDown(lift(3))
-    End Sub
+    'Private Sub btnDown_4_Click(sender As Object, e As EventArgs)
+    '    lift(3).selectDirectionDown(lift(3))
+    'End Sub
     '------------------------------------------------- START/STOP BUTTON -------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnStart_MouseDown(sender As Object, e As MouseEventArgs) Handles btnStart.MouseDown
@@ -270,7 +270,7 @@
         Dim i As Integer
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
-                lift(i).setTop()
+                'lift(i).setTop()
                 Call changeBackColorTop(lift(i))
             Next i
 
@@ -281,7 +281,7 @@
         Dim i As Integer
         If ((modeState = 1) And (zeroPositionSet = True)) Then
             For i = 0 To 3
-                lift(i).setMid()
+                ' lift(i).setMid()
                 Call changeBackColorMid(lift(i))
             Next i
         Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
@@ -290,7 +290,7 @@
     Private Sub btnZeroPos_Click(sender As Object, e As EventArgs)
         If modeState = 1 Then
             For i = 0 To 3
-                lift(i).setZero()
+                'lift(i).setZero()
                 Call changeBackColorZero(lift(i))
             Next i
             zeroPositionSet = True
@@ -303,7 +303,7 @@
 
     Private Sub btnTOP_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(0).readyToTop()
+            'lift(0).readyToTop()
             Call chngBackColor(sender, lift(0))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -311,7 +311,7 @@
 
     Private Sub btnMID_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(0).readyToMid()
+            'lift(0).readyToMid()
             Call chngBackColor(sender, lift(0))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -319,7 +319,7 @@
 
     Private Sub btnZERO_1_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(0).readyToZero()
+            'lift(0).readyToZero()
             Call chngBackColor(sender, lift(0))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -327,7 +327,7 @@
 
     Private Sub btnTOP_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(1).readyToTop()
+            'lift(1).readyToTop()
             Call chngBackColor(sender, lift(1))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -335,7 +335,7 @@
 
     Private Sub btnMID_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(1).readyToMid()
+            'lift(1).readyToMid()
             Call chngBackColor(sender, lift(1))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -343,7 +343,7 @@
 
     Private Sub btnZERO_2_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(1).readyToZero()
+            'lift(1).readyToZero()
             Call chngBackColor(sender, lift(1))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -351,7 +351,7 @@
 
     Private Sub btnTOP_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(2).readyToTop()
+            'lift(2).readyToTop()
             Call chngBackColor(sender, lift(2))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -359,7 +359,7 @@
 
     Private Sub btnMID_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(2).readyToMid()
+            'lift(2).readyToMid()
             Call chngBackColor(sender, lift(2))
         Else MsgBox("Set AUTO mode!")
         End If
@@ -367,35 +367,35 @@
 
     Private Sub btnZERO_3_Click(sender As Object, e As EventArgs)
         If modeState = 2 Then
-            lift(2).readyToZero()
+            'lift(2).readyToZero()
             Call chngBackColor(sender, lift(2))
         Else MsgBox("Set AUTO mode!")
         End If
     End Sub
 
-    Private Sub btnTOP_4_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            lift(3).readyToTop()
-            Call chngBackColor(sender, lift(3))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnTOP_4_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(3).readyToTop()
+    '        Call chngBackColor(sender, lift(3))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnMID_4_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            lift(3).readyToMid()
-            Call chngBackColor(sender, lift(3))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnMID_4_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(3).readyToMid()
+    '        Call chngBackColor(sender, lift(3))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnZERO_4_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            lift(3).readyToZero()
-            Call chngBackColor(sender, lift(3))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnZERO_4_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        lift(3).readyToZero()
+    '        Call chngBackColor(sender, lift(3))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------
@@ -566,8 +566,62 @@
             lift(2).unSelected()
         End If
     End Sub
+    '------------------------------------------------- SET ZERO POSITION  ------------------------------------------------------
+    '---------------------------------------------------------------------------------------------------------------------------
 
-    Private Sub txt_3_TextChanged(sender As Object, e As EventArgs) Handles txtPos_3.TextChanged
+    Private Sub btnSetZero_Click(sender As Object, e As EventArgs) Handles btnSetZero.Click
+        Dim zeroDataRow As DataGridViewRow
+        Dim i, j As Integer
+
+        For i = 0 To 2
+            If lift(i).selected Then
+                lift(i).pos = 0.0
+                lift(i).lblPosition.Text = lift(i).pos
+            End If
+
+        Next i
+
+        dgv.Rows.Add("zero", lift(0).pos, lift(1).pos, lift(2).pos)
+
+        zeroDataRow = dgv.Rows(0)
+        For i = 0 To 2
+            If lift(i).selected Then
+                zeroDataRow.Cells(i + 1).Style.BackColor = Color.White
+            Else
+                MsgBox("Zero position for Lift " & i + 1 & " is not set!!!")
+                j = i + 1
+                zeroDataRow.Cells(j).Style.BackColor = Color.Red
+            End If
+
+        Next i
+
+    End Sub
+    '------------------------------------------------- ADD NEW POSITION  -------------------------------------------------------
+    '---------------------------------------------------------------------------------------------------------------------------
+    Private Sub btnSavePos_Click(sender As Object, e As EventArgs) Handles btnSavePos.Click
+        Dim lastDataRow As DataGridViewRow
+        Dim i, j As Integer
+
+        For i = 0 To 2
+            If lift(i).selected Then
+                lift(i).pos = lift(i).lblPosition.Text
+                lift(i).lblPosition.Text = lift(i).pos
+            End If
+
+        Next i
+
+        dgv.Rows.Add(txtPosName.Text, lift(0).pos, lift(1).pos, lift(2).pos)
+        lastDataRow = dgv.Rows(dgv.Rows.Count - 2)
+        For i = 0 To 2
+            If lift(i).selected Then
+                lastDataRow.Cells(i + 1).Style.BackColor = Color.White
+            Else
+                MsgBox("Zero position for Lift " & i + 1 & " is not set!!!")
+                j = i + 1
+                lastDataRow.Cells(j).Style.BackColor = Color.Red
+            End If
+
+        Next i
 
     End Sub
 
