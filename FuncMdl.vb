@@ -1,27 +1,27 @@
 ﻿Module FuncMdl
 
-    Public Sub selectMode(_sender)
-        Dim i As Integer
-        mainForm.RadioButton1.BackColor = Color.FromArgb(200, 200, 200)
-        mainForm.RadioButton2.BackColor = Color.FromArgb(200, 200, 200)
-        mainForm.RadioButton3.BackColor = Color.FromArgb(200, 200, 200)
+    'Public Sub selectMode(_sender)
+    '    Dim i As Integer
+    '    mainForm.RadioButton1.BackColor = Color.FromArgb(200, 200, 200)
+    '    mainForm.RadioButton2.BackColor = Color.FromArgb(200, 200, 200)
+    '    mainForm.RadioButton3.BackColor = Color.FromArgb(200, 200, 200)
 
-        mainForm.RadioButton1.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-        mainForm.RadioButton2.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-        mainForm.RadioButton3.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+    '    mainForm.RadioButton1.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+    '    mainForm.RadioButton2.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+    '    mainForm.RadioButton3.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
 
-        _sender.BackColor = Color.FromArgb(151, 247, 125)
-        _sender.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
+    '    _sender.BackColor = Color.FromArgb(151, 247, 125)
+    '    _sender.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
 
-        If (_sender.name = "RadioButton3") Then
-            For i = 0 To 2
-                mainForm.lift(i).clearDirection()
-            Next i
-            mainForm.btnStart.Enabled = False
-        Else
-            mainForm.btnStart.Enabled = True
-        End If
-    End Sub
+    '    If (_sender.name = "RadioButton3") Then
+    '        For i = 0 To 2
+    '            mainForm.lift(i).clearDirection()
+    '        Next i
+    '        mainForm.btnStart.Enabled = False
+    '    Else
+    '        mainForm.btnStart.Enabled = True
+    '    End If
+    'End Sub
 
     Public Sub chngBackColor(_sender, _lift)
         _lift.btnTopPos.BackColor = Color.FromArgb(220, 220, 220)

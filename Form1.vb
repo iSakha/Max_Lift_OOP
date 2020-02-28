@@ -24,53 +24,47 @@
     '---------------------------------------------------------------------------------------------------------------------------
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        Call selectMode(sender)
+        'Call selectMode(sender)
         modeState = 0
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        Call selectMode(sender)
+        'Call selectMode(sender)
         modeState = 1
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
-        Call selectMode(sender)
+        'Call selectMode(sender)
         modeState = 2
     End Sub
     '------------------------------------------------- SELECT DIRECTION (Up or Down) -------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
 
     Private Sub btnUp_1_Click(sender As Object, e As EventArgs) Handles btnUp_1.Click
-        lift(0).selectDirectionUp(lift(0))
+        lift(0).selectDirection(sender, lift(0))
     End Sub
 
     Private Sub btnDown_1_Click(sender As Object, e As EventArgs) Handles btnDown_1.Click
-        lift(0).selectDirectionDown(lift(0))
+        lift(0).selectDirection(sender, lift(0))
     End Sub
 
     Private Sub btnUp_2_Click(sender As Object, e As EventArgs) Handles btnUp_2.Click
-        lift(1).selectDirectionUp(lift(1))
+        lift(1).selectDirection(sender, lift(1))
     End Sub
 
     Private Sub btnDown_2_Click(sender As Object, e As EventArgs) Handles btnDown_2.Click
-        lift(1).selectDirectionDown(lift(1))
+        lift(1).selectDirection(sender, lift(1))
     End Sub
 
     Private Sub btnUp_3_Click(sender As Object, e As EventArgs) Handles btnUp_3.Click
-        lift(2).selectDirectionUp(lift(2))
+        lift(2).selectDirection(sender, lift(2))
     End Sub
 
     Private Sub btnDown_3_Click(sender As Object, e As EventArgs) Handles btnDown_3.Click
-        lift(2).selectDirectionDown(lift(2))
+        lift(2).selectDirection(sender, lift(2))
     End Sub
 
-    'Private Sub btnUp_4_Click(sender As Object, e As EventArgs)
-    '    lift(3).selectDirectionUp(lift(3))
-    'End Sub
 
-    'Private Sub btnDown_4_Click(sender As Object, e As EventArgs)
-    '    lift(3).selectDirectionDown(lift(3))
-    'End Sub
     '------------------------------------------------- START/STOP BUTTON -------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnStart_MouseDown(sender As Object, e As MouseEventArgs) Handles btnStart.MouseDown
@@ -105,29 +99,29 @@
             Case 0
 
                 If (lift(0).readyToUp) Then
-                    lift(0).moveUP()
+                    lift(0).move(True)
                 End If
                 If (lift(0).readyToDown) Then
-                    lift(0).moveDOWN()
+                    lift(0).move(False)
                 End If
 
             Case 1
 
                 If (lift(0).readyToUp) Then
-                    lift(0).moveUP()
+                    lift(0).move(True)
                 End If
                 If (lift(0).readyToDown) Then
-                    lift(0).moveDOWN()
+                    lift(0).move(False)
                 End If
 
             Case 2
                 If (btnAutoState = True) Then
                     Dim webCl As New System.Net.WebClient
                     If lift(0).delta() > 0 Then
-                        lift(0).moveDOWN()
+                        lift(0).move(False)
                     End If
                     If lift(0).delta() < 0 Then
-                        lift(0).moveUP()
+                        lift(0).move(True)
                     End If
 
                     If lift(0).delta() = 0 Then
@@ -146,29 +140,29 @@
             Case 0
 
                 If (lift(1).readyToUp) Then
-                    lift(1).moveUP()
+                    lift(1).move(True)
                 End If
                 If (lift(1).readyToDown) Then
-                    lift(1).moveDOWN()
+                    lift(1).move(False)
                 End If
 
             Case 1
 
                 If (lift(1).readyToUp) Then
-                    lift(1).moveUP()
+                    lift(1).move(True)
                 End If
                 If (lift(1).readyToDown) Then
-                    lift(1).moveDOWN()
+                    lift(1).move(False)
                 End If
 
             Case 2
                 If (btnAutoState = True) Then
                     Dim webCl As New System.Net.WebClient
                     If lift(1).delta() > 0 Then
-                        lift(1).moveDOWN()
+                        lift(1).move(False)
                     End If
                     If lift(1).delta() < 0 Then
-                        lift(1).moveUP()
+                        lift(1).move(True)
                     End If
 
                     If lift(1).delta() = 0 Then
@@ -187,29 +181,29 @@
             Case 0
 
                 If (lift(2).readyToUp) Then
-                    lift(2).moveUP()
+                    lift(2).move(True)
                 End If
                 If (lift(2).readyToDown) Then
-                    lift(2).moveDOWN()
+                    lift(2).move(False)
                 End If
 
             Case 1
 
                 If (lift(2).readyToUp) Then
-                    lift(2).moveUP()
+                    lift(2).move(True)
                 End If
                 If (lift(2).readyToDown) Then
-                    lift(2).moveDOWN()
+                    lift(2).move(False)
                 End If
 
             Case 2
                 If (btnAutoState = True) Then
                     Dim webCl As New System.Net.WebClient
                     If lift(2).delta() > 0 Then
-                        lift(2).moveDOWN()
+                        lift(2).move(False)
                     End If
                     If lift(2).delta() < 0 Then
-                        lift(2).moveUP()
+                        lift(2).move(True)
                     End If
 
                     If lift(2).delta() = 0 Then
@@ -222,46 +216,7 @@
         End Select
     End Sub
 
-    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
 
-        Select Case modeState
-            Case 0
-
-                If (lift(3).readyToUp) Then
-                    lift(3).moveUP()
-                End If
-                If (lift(3).readyToDown) Then
-                    lift(3).moveDOWN()
-                End If
-
-            Case 1
-
-                If (lift(3).readyToUp) Then
-                    lift(3).moveUP()
-                End If
-                If (lift(3).readyToDown) Then
-                    lift(3).moveDOWN()
-                End If
-
-            Case 2
-                If (btnAutoState = True) Then
-                    Dim webCl As New System.Net.WebClient
-                    If lift(3).delta() > 0 Then
-                        lift(3).moveDOWN()
-                    End If
-                    If lift(3).delta() < 0 Then
-                        lift(3).moveUP()
-                    End If
-
-                    If lift(3).delta() = 0 Then
-                        webCl.DownloadString(lift(3).cmdStopUp)
-                        webCl.DownloadString(lift(3).cmdStopDown)
-                        lift(3).timer.Enabled = False
-                    End If
-
-                End If
-        End Select
-    End Sub
 
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
@@ -301,77 +256,80 @@
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
 
-    Private Sub btnTOP_1_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(0).readyToTop()
-            Call chngBackColor(sender, lift(0))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
 
-    Private Sub btnMID_1_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(0).readyToMid()
-            Call chngBackColor(sender, lift(0))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
 
-    Private Sub btnZERO_1_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(0).readyToZero()
-            Call chngBackColor(sender, lift(0))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
 
-    Private Sub btnTOP_2_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(1).readyToTop()
-            Call chngBackColor(sender, lift(1))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnTOP_1_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(0).readyToTop()
+    '        Call chngBackColor(sender, lift(0))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnMID_2_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(1).readyToMid()
-            Call chngBackColor(sender, lift(1))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnMID_1_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(0).readyToMid()
+    '        Call chngBackColor(sender, lift(0))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnZERO_2_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(1).readyToZero()
-            Call chngBackColor(sender, lift(1))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnZERO_1_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(0).readyToZero()
+    '        Call chngBackColor(sender, lift(0))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnTOP_3_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(2).readyToTop()
-            Call chngBackColor(sender, lift(2))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnTOP_2_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(1).readyToTop()
+    '        Call chngBackColor(sender, lift(1))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnMID_3_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(2).readyToMid()
-            Call chngBackColor(sender, lift(2))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnMID_2_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(1).readyToMid()
+    '        Call chngBackColor(sender, lift(1))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
-    Private Sub btnZERO_3_Click(sender As Object, e As EventArgs)
-        If modeState = 2 Then
-            'lift(2).readyToZero()
-            Call chngBackColor(sender, lift(2))
-        Else MsgBox("Set AUTO mode!")
-        End If
-    End Sub
+    'Private Sub btnZERO_2_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(1).readyToZero()
+    '        Call chngBackColor(sender, lift(1))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
+
+    'Private Sub btnTOP_3_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(2).readyToTop()
+    '        Call chngBackColor(sender, lift(2))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
+
+    'Private Sub btnMID_3_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(2).readyToMid()
+    '        Call chngBackColor(sender, lift(2))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
+
+    'Private Sub btnZERO_3_Click(sender As Object, e As EventArgs)
+    '    If modeState = 2 Then
+    '        'lift(2).readyToZero()
+    '        Call chngBackColor(sender, lift(2))
+    '    Else MsgBox("Set AUTO mode!")
+    '    End If
+    'End Sub
 
     'Private Sub btnTOP_4_Click(sender As Object, e As EventArgs)
     '    If modeState = 2 Then
@@ -584,6 +542,7 @@
         dgv.Rows.Add("zero", lift(0).pos, lift(1).pos, lift(2).pos)
 
         zeroDataRow = dgv.Rows(0)
+
         For i = 0 To 2
             If lift(i).selected Then
                 zeroDataRow.Cells(i + 1).Style.BackColor = Color.White

@@ -30,62 +30,65 @@
 
     '------------------------------------------------- SELECT DIRECTION (Up or Down) -------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
-    Sub selectDirectionUp(_sender)
 
-        _sender.readyToUp = Not _sender.readyToUp
-        _sender.cmd = ""
-        If _sender.readyToUp Then
-            With _sender
-                .readyToDown = False
-                .btnUP.BackColor = Color.Yellow
-                .btnUP.Font = New Font("Georgia", 10, FontStyle.Bold)
-                .btnDOWN.BackColor = Color.LightGray
-                .btnDOWN.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-                _sender.cmd = _sender.cmdUp
+    Sub selectDirection(_sender, _lift)
 
-            End With
-        Else
-            With _sender
-                .btnUP.BackColor = Color.LightGray
-                .btnUP.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-            End With
+        _lift.cmd = ""
+
+        If _sender.tag = "UP" Then
+            _lift.readyToUp = Not _lift.readyToUp
+
+            If _lift.readyToUp Then
+                With _lift
+                    .readyToDown = False
+                    .btnUP.BackColor = Color.Yellow
+                    .btnUP.Font = New Font("Georgia", 10, FontStyle.Bold)
+                    .btnDOWN.BackColor = Color.LightGray
+                    .btnDOWN.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+                    _lift.cmd = _lift.cmdUp
+
+                End With
+            Else
+                With _lift
+                    .btnUP.BackColor = Color.LightGray
+                    .btnUP.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+                End With
+            End If
+
+            If _lift.readyToUp Xor _lift.readyToDown Then
+                _lift.highlightSelected()
+
+            Else
+                _lift.unSelected()
+            End If
+
         End If
+        If _sender.tag = "DOWN" Then
+            _lift.readyToDown = Not _lift.readyToDown
 
-        If _sender.readyToUp Xor _sender.readyToDown Then
-            _sender.selected = True
-            _sender.highlightSelected()
-        Else
-            _sender.selected = False
-            _sender.unSelected()
-        End If
+            If _lift.readyToDown Then
 
-    End Sub
-    Sub selectDirectionDown(_sender)
+                With _lift
+                    .readyToUp = False
+                    .btnDOWN.BackColor = Color.Yellow
+                    .btnDOWN.Font = New Font("Georgia", 10, FontStyle.Bold)
+                    .btnUP.BackColor = Color.LightGray
+                    .btnUP.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+                    _lift.cmd = _lift.cmdDown
+                End With
+            Else
+                With _lift
+                    .btnDOWN.BackColor = Color.LightGray
+                    .btnDOWN.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
+                End With
+            End If
 
-        _sender.readyToDown = Not _sender.readyToDown
-        _sender.cmd = ""
-        If _sender.readyToDown Then
-            With _sender
-                .readyToUp = False
-                '              .notReady = False
-                .btnDOWN.BackColor = Color.Yellow
-                .btnDOWN.Font = New Font("Georgia", 10, FontStyle.Bold)
-                .btnUP.BackColor = Color.LightGray
-                .btnUP.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-                _sender.cmd = _sender.cmdDown
-            End With
-        Else
-            With _sender
-                .btnDOWN.BackColor = Color.LightGray
-                .btnDOWN.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Regular)
-            End With
-        End If
+            If _lift.readyToUp Xor _lift.readyToDown Then
+                _lift.highlightSelected()
+            Else
+                _lift.unSelected()
+            End If
 
-        If _sender.readyToUp Xor _sender.readyToDown Then
-            '           _sender.notReady = False
-            _sender.highlightSelected()
-        Else
-            _sender.unSelected()
         End If
 
     End Sub
@@ -94,26 +97,24 @@
         Me.btnUP.BackColor = Color.LightGray
         Me.readyToDown = False
         Me.btnDOWN.BackColor = Color.LightGray
-        ' Me.notReady = True
     End Sub
 
     '------------------------------------------------- LIFT MOVING (Up and Down) -----------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
-    Sub moveUP()
+    Sub move(_direction)
+        If _direction Then
+            pos = lblPosition.Text
+            pos = Convert.ToDouble(pos) + speed * tuneSpeedUp
+            lblPosition.Text = pos
+        Else
+            pos = lblPosition.Text
+            pos = Convert.ToDouble(pos) - speed * tuneSpeedDown
+            lblPosition.Text = pos
+        End If
 
-        pos = lblPosition.Text
-        pos = Convert.ToDouble(pos) + speed * tuneSpeedUp
-        lblPosition.Text = pos
-
-    End Sub
-
-    Sub moveDOWN()
-
-        pos = lblPosition.Text
-        pos = Convert.ToDouble(pos) - speed * tuneSpeedDown
-        lblPosition.Text = pos
 
     End Sub
+
 
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
@@ -161,6 +162,7 @@
     Sub highlightSelected()
         Me.lblSelected.visible = True
         Me.grpBx.BackColor = Color.FromName("DarkGray")
+        Me.selected = True
     End Sub
 
     Sub unSelected()

@@ -180,6 +180,7 @@ Partial Class mainForm
         Me.btnUp_2.Name = "btnUp_2"
         Me.btnUp_2.Size = New System.Drawing.Size(75, 23)
         Me.btnUp_2.TabIndex = 5
+        Me.btnUp_2.Tag = "UP"
         Me.btnUp_2.Text = "UP"
         Me.btnUp_2.UseVisualStyleBackColor = True
         '
@@ -189,6 +190,7 @@ Partial Class mainForm
         Me.btnDown_2.Name = "btnDown_2"
         Me.btnDown_2.Size = New System.Drawing.Size(75, 23)
         Me.btnDown_2.TabIndex = 9
+        Me.btnDown_2.Tag = "DOWN"
         Me.btnDown_2.Text = "DOWN"
         Me.btnDown_2.UseVisualStyleBackColor = True
         '
@@ -278,6 +280,7 @@ Partial Class mainForm
         Me.btnUp_3.Name = "btnUp_3"
         Me.btnUp_3.Size = New System.Drawing.Size(75, 23)
         Me.btnUp_3.TabIndex = 5
+        Me.btnUp_3.Tag = "UP"
         Me.btnUp_3.Text = "UP"
         Me.btnUp_3.UseVisualStyleBackColor = True
         '
@@ -287,6 +290,7 @@ Partial Class mainForm
         Me.btnDown_3.Name = "btnDown_3"
         Me.btnDown_3.Size = New System.Drawing.Size(75, 23)
         Me.btnDown_3.TabIndex = 9
+        Me.btnDown_3.Tag = "DOWN"
         Me.btnDown_3.Text = "DOWN"
         Me.btnDown_3.UseVisualStyleBackColor = True
         '
@@ -377,6 +381,7 @@ Partial Class mainForm
         Me.btnUp_1.Name = "btnUp_1"
         Me.btnUp_1.Size = New System.Drawing.Size(75, 23)
         Me.btnUp_1.TabIndex = 5
+        Me.btnUp_1.Tag = "UP"
         Me.btnUp_1.Text = "UP"
         Me.btnUp_1.UseVisualStyleBackColor = False
         '
@@ -386,6 +391,7 @@ Partial Class mainForm
         Me.btnDown_1.Name = "btnDown_1"
         Me.btnDown_1.Size = New System.Drawing.Size(75, 23)
         Me.btnDown_1.TabIndex = 9
+        Me.btnDown_1.Tag = "DOWN"
         Me.btnDown_1.Text = "DOWN"
         Me.btnDown_1.UseVisualStyleBackColor = True
         '
@@ -443,6 +449,9 @@ Partial Class mainForm
         'RadioButton1
         '
         Me.RadioButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.RadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
+        Me.RadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton1.Location = New System.Drawing.Point(9, 25)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(66, 23)
@@ -454,6 +463,9 @@ Partial Class mainForm
         'RadioButton3
         '
         Me.RadioButton3.Appearance = System.Windows.Forms.Appearance.Button
+        Me.RadioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
+        Me.RadioButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton3.Location = New System.Drawing.Point(153, 25)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(66, 23)
@@ -465,6 +477,9 @@ Partial Class mainForm
         'RadioButton2
         '
         Me.RadioButton2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.RadioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
+        Me.RadioButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton2.Location = New System.Drawing.Point(81, 25)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(66, 23)
