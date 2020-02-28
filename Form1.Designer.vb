@@ -450,7 +450,8 @@ Partial Class mainForm
         '
         Me.RadioButton1.Appearance = System.Windows.Forms.Appearance.Button
         Me.RadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
-        Me.RadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.RadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen
         Me.RadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton1.Location = New System.Drawing.Point(9, 25)
         Me.RadioButton1.Name = "RadioButton1"
@@ -464,7 +465,8 @@ Partial Class mainForm
         '
         Me.RadioButton3.Appearance = System.Windows.Forms.Appearance.Button
         Me.RadioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
-        Me.RadioButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.RadioButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen
         Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton3.Location = New System.Drawing.Point(153, 25)
         Me.RadioButton3.Name = "RadioButton3"
@@ -478,7 +480,8 @@ Partial Class mainForm
         '
         Me.RadioButton2.Appearance = System.Windows.Forms.Appearance.Button
         Me.RadioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime
-        Me.RadioButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.RadioButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.RadioButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.YellowGreen
         Me.RadioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton2.Location = New System.Drawing.Point(81, 25)
         Me.RadioButton2.Name = "RadioButton2"

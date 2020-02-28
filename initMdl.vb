@@ -52,6 +52,7 @@
         mainForm.lift_1.readyToDown = False
         mainForm.lift_1.selected = False
 
+        mainForm.lift_1.cmd = ""
         mainForm.lift_1.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,1"
         mainForm.lift_1.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,1"
         mainForm.lift_1.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"
@@ -91,6 +92,7 @@
         mainForm.lift_2.readyToDown = False
         mainForm.lift_2.selected = False
 
+        mainForm.lift_2.cmd = ""
         mainForm.lift_2.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,1"
         mainForm.lift_2.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,1"
         mainForm.lift_2.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"
@@ -130,6 +132,7 @@
         mainForm.lift_3.readyToDown = False
         mainForm.lift_3.selected = False
 
+        mainForm.lift_3.cmd = ""
         mainForm.lift_3.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,1"
         mainForm.lift_3.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,1"
         mainForm.lift_3.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"

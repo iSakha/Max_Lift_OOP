@@ -152,7 +152,7 @@
     '--------------------------------------------------------------------------------------------------------------------------
     Function delta()
         Dim deltaPos As Double
-        'deltaPos = pos - Convert.ToDouble(Me.txtBox.Text)
+        deltaPos = pos - Convert.ToDouble(Me.txtPos.Text)
         deltaPos = Math.Round(deltaPos, 2)
         Return deltaPos
     End Function

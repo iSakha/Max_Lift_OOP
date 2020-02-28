@@ -125,8 +125,8 @@
                     End If
 
                     If lift(0).delta() = 0 Then
-                        webCl.DownloadString(lift(0).cmdStopUp)
-                        webCl.DownloadString(lift(0).cmdStopDown)
+                        'webCl.DownloadString(lift(0).cmdStopUp)
+                        'webCl.DownloadString(lift(0).cmdStopDown)
                         lift(0).timer.Enabled = False
                     End If
 
@@ -166,8 +166,8 @@
                     End If
 
                     If lift(1).delta() = 0 Then
-                        webCl.DownloadString(lift(1).cmdStopUp)
-                        webCl.DownloadString(lift(1).cmdStopDown)
+                        'webCl.DownloadString(lift(1).cmdStopUp)
+                        'webCl.DownloadString(lift(1).cmdStopDown)
                         lift(1).timer.Enabled = False
                     End If
 
@@ -207,8 +207,8 @@
                     End If
 
                     If lift(2).delta() = 0 Then
-                        webCl.DownloadString(lift(2).cmdStopUp)
-                        webCl.DownloadString(lift(2).cmdStopDown)
+                        'webCl.DownloadString(lift(2).cmdStopUp)
+                        'webCl.DownloadString(lift(2).cmdStopDown)
                         lift(2).timer.Enabled = False
                     End If
 
@@ -221,37 +221,37 @@
     '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
 
-    Private Sub btnUpPos_Click(sender As Object, e As EventArgs)
-        Dim i As Integer
-        If ((modeState = 1) And (zeroPositionSet = True)) Then
-            For i = 0 To 3
-                'lift(i).setTop()
-                Call changeBackColorTop(lift(i))
-            Next i
+    'Private Sub btnUpPos_Click(sender As Object, e As EventArgs)
+    '    Dim i As Integer
+    '    If ((modeState = 1) And (zeroPositionSet = True)) Then
+    '        For i = 0 To 3
+    '            'lift(i).setTop()
+    '            Call changeBackColorTop(lift(i))
+    '        Next i
 
-        Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
-        End If
-    End Sub
-    Private Sub btnMidPos_Click(sender As Object, e As EventArgs)
-        Dim i As Integer
-        If ((modeState = 1) And (zeroPositionSet = True)) Then
-            For i = 0 To 3
-                ' lift(i).setMid()
-                Call changeBackColorMid(lift(i))
-            Next i
-        Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
-        End If
-    End Sub
-    Private Sub btnZeroPos_Click(sender As Object, e As EventArgs)
-        If modeState = 1 Then
-            For i = 0 To 3
-                'lift(i).setZero()
-                Call changeBackColorZero(lift(i))
-            Next i
-            zeroPositionSet = True
-        Else MsgBox("Check mode!")
-        End If
-    End Sub
+    '    Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
+    '    End If
+    'End Sub
+    'Private Sub btnMidPos_Click(sender As Object, e As EventArgs)
+    '    Dim i As Integer
+    '    If ((modeState = 1) And (zeroPositionSet = True)) Then
+    '        For i = 0 To 3
+    '            ' lift(i).setMid()
+    '            Call changeBackColorMid(lift(i))
+    '        Next i
+    '    Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
+    '    End If
+    'End Sub
+    'Private Sub btnZeroPos_Click(sender As Object, e As EventArgs)
+    '    If modeState = 1 Then
+    '        For i = 0 To 3
+    '            'lift(i).setZero()
+    '            Call changeBackColorZero(lift(i))
+    '        Next i
+    '        zeroPositionSet = True
+    '    Else MsgBox("Check mode!")
+    '    End If
+    'End Sub
 
     '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
     '---------------------------------------------------------------------------------------------------------------------------
@@ -362,7 +362,7 @@
         'Dim webCl As New System.Net.WebClient
         Dim i As Integer
         btnAutoState = True
-        For i = 0 To 3
+        For i = 0 To 2
             lift(i).cmd = ""
             lift(i).timer.Enabled = True
             If lift(i).delta() < 0 Then
@@ -584,12 +584,15 @@
 
     End Sub
 
-    Private Sub grpBx_4_MouseClick(sender As Object, e As MouseEventArgs)
-        lift(3).selected = Not lift(3).selected
-        If lift(3).selected Then
-            lift(3).highlightSelected()
-        Else
-            lift(3).unSelected()
-        End If
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
+        Dim index As Integer
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = dgv.Rows(index)
+        txtPosName.Text = selectedRow.Cells(0).Value.ToString
+        lift(0).txtPos.Text = selectedRow.Cells(1).Value.ToString
+        lift(1).txtPos.Text = selectedRow.Cells(2).Value.ToString
+        lift(2).txtPos.Text = selectedRow.Cells(3).Value.ToString
+
     End Sub
 End Class
