@@ -113,8 +113,6 @@
             pos = Convert.ToDouble(pos) - speed * tuneSpeedDown
             lblPosition.Text = pos
         End If
-
-
     End Sub
 
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
@@ -156,13 +154,23 @@
                 webCl.DownloadString(Me.cmdPumpOn)
             End If
         Else
-                Me.btnPump.BackColor = Color.FromName("gainsboro")
+            Me.btnPump.BackColor = Color.FromName("gainsboro")
             If (mainForm.btnEnableConnect.Checked = False) Then
                 webCl.DownloadString(Me.cmdReadyPumpOff)
                 webCl.DownloadString(Me.cmdPumpOff)
             End If
         End If
 
+    End Sub
+
+    Sub autoPump()
+        If Me.selected Then
+            Me.btnPump.Checked = True
+            Me.pump()
+        Else
+            Me.btnPump.Checked = False
+            Me.pump()
+        End If
     End Sub
 
 End Class

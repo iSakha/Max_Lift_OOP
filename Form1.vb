@@ -122,12 +122,15 @@
                     End If
 
                     If lift(0).delta() = 0 Then
-                        'webCl.DownloadString(lift(0).cmdStopUp)
-                        'webCl.DownloadString(lift(0).cmdStopDown)
+                        If (btnEnableConnect.Checked = False) Then
+                            webCl.DownloadString(lift(0).cmdStopUp)
+                            webCl.DownloadString(lift(0).cmdStopDown)
+                        End If
                         lift(0).timer.Enabled = False
+                        lift(0).btnPump.Checked = False
                     End If
 
-                End If
+                    End If
         End Select
     End Sub
 
@@ -163,12 +166,15 @@
                     End If
 
                     If lift(1).delta() = 0 Then
-                        'webCl.DownloadString(lift(1).cmdStopUp)
-                        'webCl.DownloadString(lift(1).cmdStopDown)
+                        If (btnEnableConnect.Checked = False) Then
+                            webCl.DownloadString(lift(1).cmdStopUp)
+                            webCl.DownloadString(lift(1).cmdStopDown)
+                        End If
                         lift(1).timer.Enabled = False
+                        lift(1).btnPump.Checked = False
                     End If
 
-                End If
+                    End If
         End Select
     End Sub
 
@@ -204,36 +210,45 @@
                     End If
 
                     If lift(2).delta() = 0 Then
-                        'webCl.DownloadString(lift(2).cmdStopUp)
-                        'webCl.DownloadString(lift(2).cmdStopDown)
+                        If (btnEnableConnect.Checked = False) Then
+                            webCl.DownloadString(lift(2).cmdStopUp)
+                            webCl.DownloadString(lift(2).cmdStopDown)
+                        End If
                         lift(2).timer.Enabled = False
+                        lift(2).btnPump.Checked = False
                     End If
 
-                End If
+                    End If
         End Select
     End Sub
+
 
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------
 
     Private Sub btnAuto_Click(sender As Object, e As EventArgs) Handles btnAuto.Click
-        'Dim webCl As New System.Net.WebClient
+        Dim webCl As New System.Net.WebClient
         Dim i As Integer
         btnAutoState = True
-        For i = 0 To 2
-            lift(i).cmd = ""
-            lift(i).timer.Enabled = True
-            If lift(i).delta() < 0 Then
-                lift(i).cmd = lift(i).cmdUp
-            End If
-            If lift(i).delta() > 0 Then
-                lift(i).cmd = lift(i).cmdDown
-            End If
-            Try
-                'webCl.DownloadString(lift(i).cmd)
-            Catch ex As Exception
 
-            End Try
+        System.Threading.Thread.Sleep(1000)
+
+        For i = 0 To 2
+            lift(i).autoPump()
+            lift(i).cmd = ""
+            If lift(i).selected Then
+                lift(i).timer.Enabled = True
+                If lift(i).delta() < 0 Then
+                    lift(i).cmd = lift(i).cmdUp
+                End If
+                If lift(i).delta() > 0 Then
+                    lift(i).cmd = lift(i).cmdDown
+                End If
+            End If
+
+            If (btnEnableConnect.Checked = False) Then
+                webCl.DownloadString(lift(i).cmd)
+            End If
         Next i
     End Sub
 
@@ -314,11 +329,6 @@
         End If
     End Sub
 
-
-
-    Private Sub testBtn_Click(sender As Object, e As EventArgs)
-        'Web.Show()
-    End Sub
 
     Private Sub grpBx_1_MouseClick(sender As Object, e As MouseEventArgs) Handles grpBx_1.MouseClick
         lift(0).selected = Not lift(0).selected
@@ -412,6 +422,8 @@
             btnEnableConnect.BackColor = Color.Gainsboro
         End If
     End Sub
+
+
 
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
         Dim index As Integer

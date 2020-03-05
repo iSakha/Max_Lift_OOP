@@ -54,7 +54,7 @@ Partial Class mainForm
         Me.btnStart = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.delayTimer = New System.Windows.Forms.Timer(Me.components)
         Me.btnAuto = New System.Windows.Forms.Button()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -84,10 +84,6 @@ Partial Class mainForm
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtPosName = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.grpBx_2.SuspendLayout()
         CType(Me.tuneSpeedDOWN2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tuneSpeedUP2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -429,9 +425,8 @@ Partial Class mainForm
         '
         Me.Timer3.Interval = 10
         '
-        'Timer4
+        'delayTimer
         '
-        Me.Timer4.Interval = 10
         '
         'btnAuto
         '
@@ -713,55 +708,11 @@ Partial Class mainForm
         Me.txtPosName.Size = New System.Drawing.Size(100, 20)
         Me.txtPosName.TabIndex = 87
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button5.Location = New System.Drawing.Point(557, 402)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 88
-        Me.Button5.Text = "<<<"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button6.Location = New System.Drawing.Point(661, 402)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 89
-        Me.Button6.Text = ">>>"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Wheat
-        Me.Label4.Location = New System.Drawing.Point(578, 433)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 13)
-        Me.Label4.TabIndex = 90
-        Me.Label4.Text = "PREV"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Wheat
-        Me.Label5.Location = New System.Drawing.Point(679, 433)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(36, 13)
-        Me.Label5.TabIndex = 91
-        Me.Label5.Text = "NEXT"
-        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.txtPosName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button4)
@@ -828,7 +779,7 @@ Partial Class mainForm
     Friend WithEvents btnStart As Button
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
-    Friend WithEvents Timer4 As Timer
+    Friend WithEvents delayTimer As Timer
     Friend WithEvents btnAuto As Button
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
@@ -870,8 +821,4 @@ Partial Class mainForm
     Friend WithEvents Button4 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents txtPosName As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
 End Class
