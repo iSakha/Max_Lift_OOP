@@ -77,7 +77,7 @@ Partial Class mainForm
         Me.Col2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Col4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnEnableConnect = New System.Windows.Forms.CheckBox()
         Me.btnSetZero = New System.Windows.Forms.Button()
         Me.btnSavePos = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -649,16 +649,17 @@ Partial Class mainForm
         Me.Col4.Name = "Col4"
         Me.Col4.Width = 63
         '
-        'CheckBox1
+        'btnEnableConnect
         '
-        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.CheckBox1.Location = New System.Drawing.Point(661, 17)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(104, 24)
-        Me.CheckBox1.TabIndex = 81
-        Me.CheckBox1.Text = "No TCP/IP"
-        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.btnEnableConnect.Appearance = System.Windows.Forms.Appearance.Button
+        Me.btnEnableConnect.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnEnableConnect.Location = New System.Drawing.Point(661, 17)
+        Me.btnEnableConnect.Name = "btnEnableConnect"
+        Me.btnEnableConnect.Size = New System.Drawing.Size(104, 24)
+        Me.btnEnableConnect.TabIndex = 81
+        Me.btnEnableConnect.Text = "No TCP/IP"
+        Me.btnEnableConnect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnEnableConnect.UseVisualStyleBackColor = False
         '
         'btnSetZero
         '
@@ -767,7 +768,7 @@ Partial Class mainForm
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnSavePos)
         Me.Controls.Add(Me.btnSetZero)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.btnEnableConnect)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.lblLift3)
         Me.Controls.Add(Me.lblLift2)
@@ -862,7 +863,7 @@ Partial Class mainForm
     Friend WithEvents Col2 As DataGridViewTextBoxColumn
     Friend WithEvents Col3 As DataGridViewTextBoxColumn
     Friend WithEvents Col4 As DataGridViewTextBoxColumn
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents btnEnableConnect As CheckBox
     Friend WithEvents btnSetZero As Button
     Friend WithEvents btnSavePos As Button
     Friend WithEvents Button3 As Button

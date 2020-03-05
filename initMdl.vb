@@ -58,6 +58,10 @@
         mainForm.lift_1.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"
         mainForm.lift_1.cmdStopDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,0"
 
+        mainForm.lift_1.cmdReadyPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,7,1"
+        mainForm.lift_1.cmdPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,8,1"
+        mainForm.lift_1.cmdReadyPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,7,0"
+        mainForm.lift_1.cmdPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,8,0"
 
         '****************************************************************************************
         '*************************   Lift 2   ***************************************************
@@ -93,10 +97,15 @@
         mainForm.lift_2.selected = False
 
         mainForm.lift_2.cmd = ""
-        mainForm.lift_2.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,1"
-        mainForm.lift_2.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,1"
-        mainForm.lift_2.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"
-        mainForm.lift_2.cmdStopDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,0"
+        mainForm.lift_2.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,3,1"
+        mainForm.lift_2.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,4,1"
+        mainForm.lift_2.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,3,0"
+        mainForm.lift_2.cmdStopDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,4,0"
+
+        mainForm.lift_2.cmdReadyPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,9,1"
+        mainForm.lift_2.cmdPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,10,1"
+        mainForm.lift_2.cmdReadyPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,9,0"
+        mainForm.lift_2.cmdPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,10,0"
 
 
         '****************************************************************************************
@@ -133,10 +142,15 @@
         mainForm.lift_3.selected = False
 
         mainForm.lift_3.cmd = ""
-        mainForm.lift_3.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,1"
-        mainForm.lift_3.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,1"
-        mainForm.lift_3.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,1,0"
-        mainForm.lift_3.cmdStopDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,2,0"
+        mainForm.lift_3.cmdUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,5,1"
+        mainForm.lift_3.cmdDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,6,1"
+        mainForm.lift_3.cmdStopUp = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,5,0"
+        mainForm.lift_3.cmdStopDown = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,6,0"
+
+        mainForm.lift_3.cmdReadyPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,11,1"
+        mainForm.lift_3.cmdPumpOn = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,12,1"
+        mainForm.lift_3.cmdReadyPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,11,0"
+        mainForm.lift_3.cmdPumpOff = "http://" & mainForm.myUrl & "/cmd.cgi?cmd=REL,12,0"
 
 
         mainForm.lift(0) = mainForm.lift_1

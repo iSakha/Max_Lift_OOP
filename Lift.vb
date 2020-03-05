@@ -25,6 +25,8 @@
     Public selected As Boolean
 
     Public cmdUp, cmdDown, cmdStopUp, cmdStopDown As String
+    Public cmdPumpOn, cmdPumpOff As String
+    Public cmdReadyPumpOn, cmdReadyPumpOff As String
     Public cmd As String = ""
 
 
@@ -115,39 +117,6 @@
 
     End Sub
 
-
-    '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
-    '---------------------------------------------------------------------------------------------------------------------------
-    'Sub setTop()
-    '    If selected Then
-    '        'topPos = pos
-    '    End If
-    'End Sub
-    'Sub setMid()
-    '    If selected Then
-    '        'midPos = pos
-    '    End If
-    'End Sub
-    'Sub setZero()
-    '    If selected Then
-    '        pos = 0.0
-    '        'zeroPos = pos
-    '        'Me.lblPosition.Text = Format(zeroPos, "#0")
-    '    End If
-    'End Sub
-
-    '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
-    '---------------------------------------------------------------------------------------------------------------------------
-    'Sub readyToTop()
-    '    ' Me.txtBox.Text = topPos
-    'End Sub
-    'Sub readyToMid()
-    '    'Me.txtBox.Text = midPos
-    'End Sub
-    'Sub readyToZero()
-    '    'Me.txtBox.Text = zeroPos
-    'End Sub
-
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------
     Function delta()
@@ -171,9 +140,29 @@
         Me.selected = False
     End Sub
 
-End Class
-'Sub New(_btnUP As Button, _btnDOWN As Button, _pos As Label)
-'    Me.btnUP = _btnUP
-'    Me.btnDOWN = _btnDOWN
 
-'End Sub
+
+    '-------------------------------------------------    PUMP ON/OFF    ------------------------------------------------------
+    '--------------------------------------------------------------------------------------------------------------------------
+
+    Sub pump()
+
+        Dim webCl As New System.Net.WebClient
+
+        If Me.btnPump.Checked Then
+            Me.btnPump.BackColor = Color.FromName("lime")
+            If (mainForm.btnEnableConnect.Checked = False) Then
+                webCl.DownloadString(Me.cmdReadyPumpOn)
+                webCl.DownloadString(Me.cmdPumpOn)
+            End If
+        Else
+                Me.btnPump.BackColor = Color.FromName("gainsboro")
+            If (mainForm.btnEnableConnect.Checked = False) Then
+                webCl.DownloadString(Me.cmdReadyPumpOff)
+                webCl.DownloadString(Me.cmdPumpOff)
+            End If
+        End If
+
+    End Sub
+
+End Class

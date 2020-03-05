@@ -24,17 +24,14 @@
     '---------------------------------------------------------------------------------------------------------------------------
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        'Call selectMode(sender)
         modeState = 0
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        'Call selectMode(sender)
         modeState = 1
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
-        'Call selectMode(sender)
         modeState = 2
     End Sub
     '------------------------------------------------- SELECT DIRECTION (Up or Down) -------------------------------------------
@@ -216,145 +213,6 @@
         End Select
     End Sub
 
-
-
-    '------------------------------------------------- SET POSITION (TOP, MID and ZERO) ----------------------------------------
-    '---------------------------------------------------------------------------------------------------------------------------
-
-    'Private Sub btnUpPos_Click(sender As Object, e As EventArgs)
-    '    Dim i As Integer
-    '    If ((modeState = 1) And (zeroPositionSet = True)) Then
-    '        For i = 0 To 3
-    '            'lift(i).setTop()
-    '            Call changeBackColorTop(lift(i))
-    '        Next i
-
-    '    Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
-    '    End If
-    'End Sub
-    'Private Sub btnMidPos_Click(sender As Object, e As EventArgs)
-    '    Dim i As Integer
-    '    If ((modeState = 1) And (zeroPositionSet = True)) Then
-    '        For i = 0 To 3
-    '            ' lift(i).setMid()
-    '            Call changeBackColorMid(lift(i))
-    '        Next i
-    '    Else MsgBox("Set PROGRAMM mode!Set ZERO position FIRST!")
-    '    End If
-    'End Sub
-    'Private Sub btnZeroPos_Click(sender As Object, e As EventArgs)
-    '    If modeState = 1 Then
-    '        For i = 0 To 3
-    '            'lift(i).setZero()
-    '            Call changeBackColorZero(lift(i))
-    '        Next i
-    '        zeroPositionSet = True
-    '    Else MsgBox("Check mode!")
-    '    End If
-    'End Sub
-
-    '------------------------------------------------- SELECT POSITION ---------------------------------------------------------
-    '---------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-    'Private Sub btnTOP_1_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(0).readyToTop()
-    '        Call chngBackColor(sender, lift(0))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnMID_1_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(0).readyToMid()
-    '        Call chngBackColor(sender, lift(0))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnZERO_1_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(0).readyToZero()
-    '        Call chngBackColor(sender, lift(0))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnTOP_2_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(1).readyToTop()
-    '        Call chngBackColor(sender, lift(1))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnMID_2_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(1).readyToMid()
-    '        Call chngBackColor(sender, lift(1))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnZERO_2_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(1).readyToZero()
-    '        Call chngBackColor(sender, lift(1))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnTOP_3_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(2).readyToTop()
-    '        Call chngBackColor(sender, lift(2))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnMID_3_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(2).readyToMid()
-    '        Call chngBackColor(sender, lift(2))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnZERO_3_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(2).readyToZero()
-    '        Call chngBackColor(sender, lift(2))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnTOP_4_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(3).readyToTop()
-    '        Call chngBackColor(sender, lift(3))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnMID_4_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        'lift(3).readyToMid()
-    '        Call chngBackColor(sender, lift(3))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
-    'Private Sub btnZERO_4_Click(sender As Object, e As EventArgs)
-    '    If modeState = 2 Then
-    '        lift(3).readyToZero()
-    '        Call chngBackColor(sender, lift(3))
-    '    Else MsgBox("Set AUTO mode!")
-    '    End If
-    'End Sub
-
     '------------------------------------------------- GO TO POSITION ---------------------------------------------------------
     '--------------------------------------------------------------------------------------------------------------------------
 
@@ -388,37 +246,6 @@
         End If
     End Sub
 
-
-
-
-
-
-
-
-    '------------------------------------------------- TEST LAURENT-112 -------------------------------------------------------
-    '--------------------------------------------------------------------------------------------------------------------------
-
-    'Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs)
-    '    cmd_txt.Text = "http://" & url_txt.Text & "/cmd.cgi?cmd=REL," & rel_txt.Text
-    '    cmd = cmd_txt.Text
-    'End Sub
-
-    'Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    cmd_txt.Text = "http://" & url_txt.Text & "/cmd.cgi?cmd=REL," & rel_txt.Text
-    '    cmd = cmd_txt.Text & "," & on_off_cmb.SelectedItem
-    '    cmd_txt.Text = cmd
-    'End Sub
-
-    'Private Sub sendBtn_Click(sender As Object, e As EventArgs)
-    '    'resp_txt.Text = ""
-    '    'on_off_cmb.Text = "-"
-    '    'rel_txt.Text = ""
-
-    '    Dim web As New System.Net.WebClient
-    '    Dim str As String = web.DownloadString(cmd)
-    '    resp_txt.Text = str
-    'End Sub
-
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
         Dim webCl As New System.Net.WebClient
         Dim str As String = webCl.DownloadString("http://192.168.100.115/cmd.cgi?")
@@ -429,47 +256,41 @@
     '-----------------------------------------------------------------------------------------------------------------------
 
     Private Sub pumpChkBx_1_CheckedChanged(sender As Object, e As EventArgs) Handles pumpChkBx_1.CheckedChanged
-        Dim webCl As New System.Net.WebClient
-        If pumpChkBx_1.Checked Then
-            pumpChkBx_1.BackColor = Color.FromName("lime")
-            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,1")
-        Else
-            pumpChkBx_1.BackColor = Color.FromName("gainsboro")
-            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,0")
-        End If
+        'Dim webCl As New System.Net.WebClient
+        'If pumpChkBx_1.Checked Then
+        '    pumpChkBx_1.BackColor = Color.FromName("lime")
+        '    'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,1")
+        'Else
+        '    pumpChkBx_1.BackColor = Color.FromName("gainsboro")
+        '    'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,9,0")
+        'End If
+
+        lift(0).pump()
+
     End Sub
 
     Private Sub pumpChkBx_2_CheckedChanged(sender As Object, e As EventArgs) Handles pumpChkBx_2.CheckedChanged
-        Dim webCl As New System.Net.WebClient
-        If pumpChkBx_2.Checked Then
-            pumpChkBx_2.BackColor = Color.FromName("lime")
-            ' webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,1")
-        Else
-            pumpChkBx_2.BackColor = Color.FromName("gainsboro")
-            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,0")
-        End If
+        'Dim webCl As New System.Net.WebClient
+        'If pumpChkBx_2.Checked Then
+        '    pumpChkBx_2.BackColor = Color.FromName("lime")
+        '    ' webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,1")
+        'Else
+        '    pumpChkBx_2.BackColor = Color.FromName("gainsboro")
+        '    'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,10,0")
+        'End If
+        lift(1).pump()
     End Sub
 
     Private Sub pumpChkBx_3_CheckedChanged(sender As Object, e As EventArgs) Handles pumpChkBx_3.CheckedChanged
-        Dim webCl As New System.Net.WebClient
-        If pumpChkBx_3.Checked Then
-            pumpChkBx_3.BackColor = Color.FromName("lime")
-            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,1")
-        Else
-            pumpChkBx_3.BackColor = Color.FromName("gainsboro")
-            'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,0")
-        End If
-    End Sub
-
-    Private Sub pumpChkBx_4_CheckedChanged(sender As Object, e As EventArgs)
-        Dim webCl As New System.Net.WebClient
-        'If pumpChkBx_4.Checked Then
-        '    pumpChkBx_4.BackColor = Color.FromName("lime")
-        '    webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,1")
+        'Dim webCl As New System.Net.WebClient
+        'If pumpChkBx_3.Checked Then
+        '    pumpChkBx_3.BackColor = Color.FromName("lime")
+        '    'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,1")
         'Else
-        '    pumpChkBx_4.BackColor = Color.FromName("gainsboro")
-        '    webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,12,0")
+        '    pumpChkBx_3.BackColor = Color.FromName("gainsboro")
+        '    'webCl.DownloadString("http://192.168.100.115/cmd.cgi?cmd=REL,11,0")
         'End If
+        lift(2).pump()
     End Sub
 
     Private Sub speedChckBx_CheckedChanged(sender As Object, e As EventArgs) Handles speedChckBx.CheckedChanged
@@ -582,6 +403,14 @@
 
         Next i
 
+    End Sub
+
+    Private Sub btnEnableConnect_CheckedChanged(sender As Object, e As EventArgs) Handles btnEnableConnect.CheckedChanged
+        If btnEnableConnect.Checked Then
+            btnEnableConnect.BackColor = Color.Red
+        Else
+            btnEnableConnect.BackColor = Color.Gainsboro
+        End If
     End Sub
 
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
